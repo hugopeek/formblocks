@@ -1,0 +1,67 @@
+{
+    "name": "FormBlocks",
+    "lowCaseName": "formblocks",
+    "description": "FormBlocks lets you create your own forms in MODX. It uses ContentBlocks to add the various fields you need and a slightly modified FormIt version to validate and submit the forms.",
+    "author": "Hugo Peek",
+    "version": "0.1.0",
+
+    "package":{
+        "elements": {
+            "chunks": [
+                {
+                    "name": "formBlocksAutoresponder"
+                },{
+                    "name": "formBlocksCB"
+                },{
+                    "name": "formBlocksEmail"
+                },{
+                    "name": "formBlocksEmailRow"
+                },{
+                    "name": "formBlocksTextfield"
+                },{
+                    "name": "formBlocksTextarea"
+                }
+            ],
+
+            "snippets": [
+                {
+                    "name": "formBlocksEmail"
+                },{
+                    "name": "requiredIf"
+                },{
+                    "name": "requiredIfNot"
+                }
+            ],
+
+            "templates": [{
+                "name": "Form"
+            }],
+
+            "tvs": [
+                {
+                    "caption": "E-mailadres ontvanger",
+                    "name": "form_email_to",
+                    "description": "Optioneel. Als dit veld leeg is, wordt het formulier automatisch naar het hoofdadres verzonden (in te stellen onder Extra's > Configuratie).",
+                    "type": "email",
+                    "templates": ["Form"]
+                },{
+                    "caption": "Onderwerp van e-mail",
+                    "name": "form_email_subject",
+                    "description": "Je kan hier placeholders gebruiken van velden in het formulier (bijvoorbeeld: Reactie van [[+form_name]]).",
+                    "type": "text",
+                    "templates": ["Form"]
+                },{
+                    "caption": "Redirect pagina",
+                    "name": "form_redirect",
+                    "description": "Vul hier het ID in van de gewenste bedanktpagina, of sleep de pagina vanuit het menu dit invoerveld in.",
+                    "type": "number",
+                    "templates": ["Form"]
+                }
+            ]
+        },
+
+        "systemSettings": []
+    },
+
+    "extensionPackage": {}
+}
