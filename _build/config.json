@@ -5,7 +5,7 @@
     "author": "Hugo Peek",
     "version": "0.1.0",
 
-    "package":{
+    "package": {
         "elements": {
             "chunks": [
                 {
@@ -24,6 +24,9 @@
                     "name": "formBlocksSelectOption"
                 },{
                     "name": "formBlocksSelectOptionRow"
+                },{
+                    "name": "cbFormBlocksLayoutFieldset",
+                    "category": "ContentBlocks"
                 }
             ],
 
@@ -33,53 +36,54 @@
                 }
             ],
 
-            "templates": [{
-                "name": "Form",
-                "category": "Global Content"
-            }],
+            "templates": [
+                {
+                    "name": "Form"
+                }
+            ],
 
             "tvs": [
                 {
                     "caption": "E-mailadres ontvanger",
                     "name": "form_email_to",
+                    "category": "Instellingen",
                     "sortOrder": "1",
                     "description": "Optioneel. Als dit veld leeg is, wordt het formulier automatisch naar het hoofdadres verzonden (in te stellen onder Extra's > Configuratie).",
                     "type": "email",
-                    "templates": ["Form"],
-                    "parent": "Instellingen"
+                    "templates": ["Form"]
                 },{
                     "caption": "Onderwerp van e-mail",
                     "name": "form_email_subject",
+                    "category": "Algemeen",
                     "sortOrder": "1",
                     "description": "Je kan hier placeholders gebruiken van velden in het formulier (bijvoorbeeld: Reactie van [[+form_name]]).",
                     "type": "text",
-                    "templates": ["Form"],
-                    "parent": "Algemeen"
+                    "templates": ["Form"]
                 },{
                     "caption": "Redirect pagina",
                     "name": "form_redirect",
+                    "category": "Instellingen",
                     "sortOrder": "90",
                     "description": "Vul hier het ID in van de gewenste bedanktpagina, of sleep de pagina vanuit het menu dit invoerveld in.",
                     "type": "number",
-                    "templates": ["Form"],
-                    "parent": "Instellingen"
+                    "templates": ["Form"]
+                },{
+                    "caption": "Tekst in verzendknop",
+                    "name": "form_submit_button",
+                    "category": "Algemeen",
+                    "sortOrder": "90",
+                    "type": "text",
+                    "templates": ["Form"]
                 },{
                     "caption": "Layout van formulier",
                     "name": "form_layout",
+                    "category": "Instellingen",
                     "sortOrder": "5",
                     "description": "Standaard staan alle velden en labels onder elkaar, bij Inline staan de velden en labels naast elkaar (alleen geschikt voor kleine formulieren dus) en bij Horizontaal staan de labels naast de velden.",
                     "type": "listbox",
                     "inputOptionValues": "Standaard layout==form-default||Horizontaal formulier==form-horizontal||Inline formulier==form-inline",
                     "defaultValue": "form-horizontal",
-                    "templates": ["Form"],
-                    "parent": "Instellingen"
-                },{
-                    "caption": "Tekst in verzendknop",
-                    "name": "form_submit_button",
-                    "sortOrder": "90",
-                    "type": "text",
-                    "templates": ["Form"],
-                    "parent": "Algemeen"
+                    "templates": ["Form"]
                 }
             ],
 
@@ -88,6 +92,8 @@
                     "name": "Algemeen"
                 },{
                     "name": "Instellingen"
+                },{
+                    "name": "ContentBlocks"
                 }
             ]
         },
