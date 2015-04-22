@@ -59,7 +59,7 @@
                     "name": "form_email_to",
                     "category": "Instellingen",
                     "sortOrder": "1",
-                    "description": "Optioneel. Als dit veld leeg is, wordt het formulier automatisch naar het hoofdadres verzonden (in te stellen onder Extra\'s > Configuratie).",
+                    "description": "Optioneel. Als dit veld leeg is, wordt het formulier automatisch naar het hoofdadres verzonden (in te stellen onder Extra's > Configuratie).",
                     "type": "email",
                     "templates": ["Form"]
                 },{
