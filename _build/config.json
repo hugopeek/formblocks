@@ -3,7 +3,7 @@
     "lowCaseName": "formblocks",
     "description": "FormBlocks lets you create your own forms in MODX. It uses ContentBlocks to add the various fields you need and a slightly modified FormIt version to validate and submit the forms.",
     "author": "Hugo Peek",
-    "version": "0.1.0",
+    "version": "0.2.1",
 
     "package": {
         "elements": {
@@ -21,6 +21,10 @@
                 },{
                     "name": "formBlocksTextarea"
                 },{
+                    "name": "formBlocksSelectBox"
+                },{
+                    "name": "formBlocksSelectBoxRow"
+                },{
                     "name": "formBlocksSelectOption"
                 },{
                     "name": "formBlocksSelectOptionRow"
@@ -36,6 +40,13 @@
                 }
             ],
 
+            "plugins": [
+                {
+                    "name": "formBlocksLexiconMgr",
+                    "events": ["OnDocFormRender"]
+                }
+            ],
+
             "templates": [
                 {
                     "name": "Form"
@@ -48,14 +59,14 @@
                     "name": "form_email_to",
                     "category": "Instellingen",
                     "sortOrder": "1",
-                    "description": "Optioneel. Als dit veld leeg is, wordt het formulier automatisch naar het hoofdadres verzonden (in te stellen onder Extra's > Configuratie).",
+                    "description": "Optioneel. Als dit veld leeg is, wordt het formulier automatisch naar het hoofdadres verzonden (in te stellen onder Extra\'s > Configuratie).",
                     "type": "email",
                     "templates": ["Form"]
                 },{
                     "caption": "Onderwerp van e-mail",
                     "name": "form_email_subject",
                     "category": "Algemeen",
-                    "sortOrder": "1",
+                    "sortOrder": "2",
                     "description": "Je kan hier placeholders gebruiken van velden in het formulier (bijvoorbeeld: Reactie van [[+form_name]]).",
                     "type": "text",
                     "templates": ["Form"]
@@ -71,7 +82,7 @@
                     "caption": "Tekst in verzendknop",
                     "name": "form_submit_button",
                     "category": "Algemeen",
-                    "sortOrder": "90",
+                    "sortOrder": "92",
                     "type": "text",
                     "templates": ["Form"]
                 },{

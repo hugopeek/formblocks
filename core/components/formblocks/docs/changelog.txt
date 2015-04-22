@@ -1,0 +1,18 @@
+Changelog for FormBlocks
+
+++ FormBlocks 0.2.1-pl
+++ Released on 22-04-2015
++++++++++++++++++++++++++
+- Add lexicon plugin
+
+++ FormBlocks 0.2.0-pl
+++ Released on 22-04-2015
++++++++++++++++++++++++++
+- Add Select Box field
+- Add setting to show Select Options inline
+- Improve label positioning
+
+++ FormBlocks 0.1.0-pl
+++ Released on 15-04-2015
++++++++++++++++++++++++++
+- Initial release
