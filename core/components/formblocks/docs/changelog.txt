@@ -1,5 +1,10 @@
 Changelog for FormBlocks
 
+++ FormBlocks 0.3.0-pl
+++ Released on 28-04-2015
++++++++++++++++++++++++++
+- Add file input
+
 ++ FormBlocks 0.2.1-pl
 ++ Released on 22-04-2015
 +++++++++++++++++++++++++
