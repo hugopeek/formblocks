@@ -3,31 +3,31 @@
     "lowCaseName": "formblocks",
     "description": "FormBlocks lets you create your own forms in MODX. It uses ContentBlocks to add the various fields you need and a slightly modified FormIt version to validate and submit the forms.",
     "author": "Hugo Peek",
-    "version": "0.2.1",
+    "version": "0.2.2",
 
     "package": {
         "elements": {
             "chunks": [
                 {
-                    "name": "formBlocksAutoresponder"
+                    "name": "FormBlocksAutoresponder"
                 },{
-                    "name": "formBlocksContentBlock"
+                    "name": "FormBlocksContentBlock"
                 },{
-                    "name": "formBlocksEmail"
+                    "name": "FormBlocksEmail"
                 },{
-                    "name": "formBlocksEmailRow"
+                    "name": "FormBlocksEmailRow"
                 },{
-                    "name": "formBlocksTextfield"
+                    "name": "FormBlocksTextfield"
                 },{
-                    "name": "formBlocksTextarea"
+                    "name": "FormBlocksTextarea"
                 },{
-                    "name": "formBlocksSelectBox"
+                    "name": "FormBlocksSelectBox"
                 },{
-                    "name": "formBlocksSelectBoxRow"
+                    "name": "FormBlocksSelectBoxRow"
                 },{
-                    "name": "formBlocksSelectOption"
+                    "name": "FormBlocksSelectOption"
                 },{
-                    "name": "formBlocksSelectOptionRow"
+                    "name": "FormBlocksSelectOptionRow"
                 },{
                     "name": "cbFormBlocksLayoutFieldset",
                     "category": "ContentBlocks"
@@ -36,13 +36,13 @@
 
             "snippets": [
                 {
-                    "name": "formBlocksEmail"
+                    "name": "FormBlocksEmail"
                 }
             ],
 
             "plugins": [
                 {
-                    "name": "formBlocksLexiconMgr",
+                    "name": "FormBlocksLexiconMgr",
                     "events": ["OnDocFormRender"]
                 }
             ],
