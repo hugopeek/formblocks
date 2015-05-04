@@ -1,4 +1,4 @@
-[[+field_name:stripAsAlias:toPlaceholder=`name`]]
+[[+field_name:FormBlocksStripAsAlias:toPlaceholder=`name`]]
 
 [[+option_layout:isnot=`inline`:then=`
 <div class="[[+field_type]]">

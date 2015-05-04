@@ -1,4 +1,4 @@
-[[*pagetitle:stripAsAlias:toPlaceholder=`title`]]
+[[*pagetitle:FormBlocksStripAsAlias:toPlaceholder=`title`]]
 
 [[!FormIt?
     &hooks=`spam,FormBlocksEmail,redirect`

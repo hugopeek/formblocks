@@ -41,7 +41,7 @@
                 },{
                     "name": "FormBlocksLoadAssets"
                 },{
-                    "name": "stripAsAlias"
+                    "name": "FormBlocksStripAsAlias"
                 }
             ],
 
@@ -114,7 +114,14 @@
             ]
         },
 
-        "systemSettings": []
+        "systemSettings": [
+            {
+                "key": "field_select_collapse_id",
+                "type": "textfield",
+                "area": "Pages",
+                "value": ""
+            }
+        ]
     },
 
     "extensionPackage": {}
