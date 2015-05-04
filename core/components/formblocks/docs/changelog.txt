@@ -1,5 +1,11 @@
 Changelog for FormBlocks
 
+++ FormBlocks 0.4.1-pl
+++ Released on 04-05-2015
++++++++++++++++++++++++++
+- Add system setting for Select Option with Collapse id
+- Fix stripAsAlias bug
+
 ++ FormBlocks 0.4.0-pl
 ++ Released on 04-05-2015
 +++++++++++++++++++++++++

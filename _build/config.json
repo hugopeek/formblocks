@@ -3,7 +3,7 @@
     "lowCaseName": "formblocks",
     "description": "FormBlocks lets you create your own forms in MODX. It uses ContentBlocks to add the various fields you need and a slightly modified FormIt version to validate and submit the forms.",
     "author": "Hugo Peek",
-    "version": "0.4.0",
+    "version": "0.4.1",
 
     "package": {
         "elements": {
