@@ -1,0 +1,7 @@
+id: 1
+name: 'Basic fieldset'
+description: ''
+icon: template_03
+icon_type: core
+content: '[{"layout":16,"content":{"main":[]},"settings":{"legend":""},"parent":0}]'
+availability: '[{"field":"template","value":"4"}]'

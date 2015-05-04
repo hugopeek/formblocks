@@ -32,9 +32,6 @@
                     "name": "FormBlocksFileInput"
                 },{
                     "name": "FormBlocksHiddenField"
-                },{
-                    "name": "cbFormBlocksLayoutFieldset",
-                    "category": "ContentBlocks"
                 }
             ],
 

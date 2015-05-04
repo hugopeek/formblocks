@@ -1,0 +1,14 @@
+id: 26
+input: chunk
+name: Textfield
+description: ''
+sortorder: 26
+icon: paragraph
+icon_type: core
+template: '[[+tag]]'
+properties: '{"chunk":"86","custom_preview":"<p><em>You can select a different input type or add an optional placeholder in the Settings menu.<\/em><\/p>"}'
+availability: '[{"field":"template","value":"4,6"},{"field":"context","value":"web"}]'
+layouts: ''
+times_per_layout: 0
+times_per_page: 0
+settings: '[{"reference":"field_name","title":"Label","fieldtype":"textfield","default_value":"","fieldoptions":"","field_is_exposed":"asField"},{"reference":"field_layout","title":"Label position","fieldtype":"select","default_value":"[[*form_layout]]","fieldoptions":"Inherit (from Form Layout)=[[*form_layout]]\nAbove options=form-default\nLeft of options=form-horizontal","field_is_exposed":"modal"},{"reference":"field_type","title":"Input type","fieldtype":"select","default_value":"text","fieldoptions":"Text=text\nE-mail=email\nPhone=tel\nNumber=number\nDate=date\nURL=url\nPassword=password\nHidden=hidden","field_is_exposed":"modal"},{"reference":"field_placeholder","title":"Placeholder","fieldtype":"textfield","default_value":"","fieldoptions":"","field_is_exposed":"modal"},{"reference":"field_required","title":"Required","fieldtype":"select","default_value":"1","fieldoptions":"Yes=1\nNo=0","field_is_exposed":"asField"}]'

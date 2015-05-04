@@ -1,0 +1,14 @@
+id: 22
+input: chunk
+name: Formulier
+description: 'Voeg een formulier toe op deze plek. Je kan kiezen uit een lijst met alle actieve formulieren uit de FormBlocks module.'
+sortorder: 22
+icon: chunk_C
+icon_type: ''
+template: '[[+value]]'
+properties: '{"chunk":"58","custom_preview":"<p><em>Voeg een formulier toe op deze plek. Je kan kiezen uit een lijst met alle actieve formulieren uit de FormBlocks module.<\/em><\/p>"}'
+availability: '[]'
+layouts: ''
+times_per_layout: 0
+times_per_page: 0
+settings: '[{"reference":"form_id","title":"Formulier ID","fieldtype":"textfield","default_value":"10","fieldoptions":"","field_is_exposed":"asField"}]'
