@@ -1,4 +1,4 @@
-[[+field_name:lcase:replace=` ==-`:toPlaceholder=`name`]]
+[[+field_name:stripAsAlias:toPlaceholder=`name`]]
 
 <div id="[[+name]]" class="form-group [[+field_type]]-group [[!+fi.error.[[+name]]:notempty=`has-error`]]">
     <label for="[[+name]]" class="control-label [[+field_layout:is=`form-horizontal`:then=`col-sm-4`:else=`stacked`]]">[[+field_name]][[+field_required:is=`1`:then=`<span class="required">*</span>`]]</label>

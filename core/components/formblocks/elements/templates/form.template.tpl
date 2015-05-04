@@ -1,8 +1,8 @@
-[[*pagetitle:lcase:replace=` ==-`:toPlaceholder=`title`]]
+[[*pagetitle:stripAsAlias:toPlaceholder=`title`]]
 
 [[!FormIt?
-    &hooks=`spam,formBlocksEmail,redirect`
-    &emailTpl=`formBlocksEmail`
+    &hooks=`spam,FormBlocksEmail,redirect`
+    &emailTpl=`FormBlocksEmail`
     &emailTo=`[[*form_email_to:empty=`[[++client_email]]`]]`
     &emailSubject=`[[*form_email_subject]]`
     &validate=`
@@ -15,7 +15,7 @@
 [[!+fi.validation_error_message:notempty=`
 <div class="alert alert-danger">
     <button type="button" class="icon close" data-dismiss="alert"></button>
-    [[%site.forms.validation_error_message]]
+    [[%formblocks.validation_error_message]]
 </div>
 `]]
 
@@ -32,3 +32,5 @@
         </div>
     </fieldset>
 </form>
+
+[[FormBlocksLoadAssets]]
