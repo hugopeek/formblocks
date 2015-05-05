@@ -1,4 +1,4 @@
-id: 22
+id:
 input: chunk
 name: Formulier
 description: 'Voeg een formulier toe op deze plek. Je kan kiezen uit een lijst met alle actieve formulieren uit de FormBlocks module.'

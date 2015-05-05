@@ -1,5 +1,10 @@
 Changelog for FormBlocks
 
+++ FormBlocks 0.4.2-pl
+++ Released on 04-05-2015
++++++++++++++++++++++++++
+- Add gitify _data files
+
 ++ FormBlocks 0.4.1-pl
 ++ Released on 04-05-2015
 +++++++++++++++++++++++++

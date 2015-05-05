@@ -1,0 +1,14 @@
+id:
+input: chunk
+name: 'File Input'
+description: ''
+sortorder: 31
+icon: paragraph
+icon_type: core
+template: '[[+tag]]'
+properties: '{"chunk":"92","custom_preview":"<p><em>You can select a different input type or add an optional placeholder in the Settings menu.<\/em><\/p>"}'
+availability: ''
+layouts: ''
+times_per_layout: 0
+times_per_page: 0
+settings: '[{"reference":"field_name","title":"Label","fieldtype":"textfield","default_value":"","fieldoptions":"","field_is_exposed":"asField"},{"reference":"field_layout","title":"Label position","fieldtype":"select","default_value":"[[*form_layout]]","fieldoptions":"Inherit (from Form Layout)=[[*form_layout]]\nAbove options=form-default\nLeft of options=form-horizontal","field_is_exposed":"modal"},{"reference":"field_helptext","title":"Help text","fieldtype":"textfield","default_value":"","fieldoptions":"","field_is_exposed":"modal"},{"reference":"field_required","title":"Required","fieldtype":"select","default_value":"1","fieldoptions":"Yes=1\nNo=0","field_is_exposed":"asField"}]'
