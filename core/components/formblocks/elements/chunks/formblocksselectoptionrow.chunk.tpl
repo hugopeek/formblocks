@@ -13,7 +13,9 @@
                class="[[+collapse_target:isnot=``:then=`collapse-[[+field_type]]`]]"
                data-group="[[+collapse_target:isnot=``:then=`[[+name]]`]]"
                data-target="[[+collapse_target]]"
-               [[+field_helptext:notempty=`aria-describedby="help-[[+name]]"`]]>
+               [[!+fi.[[+name]]:FormItIsChecked=`[[+field_option]]`]]
+               [[+field_helptext:notempty=`aria-describedby="help-[[+name]]"`]]
+        >
         [[+field_option]]
     </label>
 [[+option_layout:isnot=`inline`:then=`

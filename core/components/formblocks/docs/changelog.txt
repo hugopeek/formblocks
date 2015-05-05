@@ -1,7 +1,13 @@
 Changelog for FormBlocks
 
+++ FormBlocks 0.4.3-pl
+++ Released on 05-05-2015
++++++++++++++++++++++++++
+- Add FormBlocksStripNonAlpha output modifier
+- Add workaround for special characters breaking output
+
 ++ FormBlocks 0.4.2-pl
-++ Released on 04-05-2015
+++ Released on 05-05-2015
 +++++++++++++++++++++++++
 - Add gitify _data files
 
