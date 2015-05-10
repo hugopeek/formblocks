@@ -3,70 +3,80 @@
     "lowCaseName": "formblocks",
     "description": "FormBlocks lets you create your own forms in MODX. It uses ContentBlocks to add the various fields you need and a slightly modified FormIt version to validate and submit the forms.",
     "author": "Hugo Peek",
-    "version": "0.5.0",
+    "version": "0.6.0",
 
     "package": {
         "elements": {
             "chunks": [
                 {
-                    "name": "FormBlocksAutoresponder"
+                    "name": "fbAutoresponder"
                 },{
-                    "name": "FormBlocksContentBlock"
+                    "name": "fbContentBlock"
                 },{
-                    "name": "FormBlocksEmail"
+                    "name": "fbEmail"
                 },{
-                    "name": "FormBlocksEmailRow"
+                    "name": "fbEmailRow"
                 },{
-                    "name": "FormBlocksTextfield"
+                    "name": "fbInputTextfield",
+                    "category": "Input types"
                 },{
-                    "name": "FormBlocksTextarea"
+                    "name": "fbInputTextarea",
+                    "category": "Input types"
                 },{
-                    "name": "FormBlocksSelectBox"
+                    "name": "fbSelectDropdown",
+                    "category": "Input types"
                 },{
-                    "name": "FormBlocksSelectBoxRow"
+                    "name": "fbSelectDropdownRow",
+                    "category": "Input types"
                 },{
-                    "name": "FormBlocksSelectOption"
+                    "name": "fbSelectOption",
+                    "category": "Input types"
                 },{
-                    "name": "FormBlocksSelectOptionRow"
+                    "name": "fbSelectOptionRow",
+                    "category": "Input types"
                 },{
-                    "name": "FormBlocksFileInput"
+                    "name": "fbInputFile",
+                    "category": "Input types"
                 },{
-                    "name": "FormBlocksHiddenField"
+                    "name": "fbInputHidden",
+                    "category": "Input types"
+                },{
+                    "name": "fbValidateRow"
                 }
             ],
 
             "snippets": [
                 {
-                    "name": "FormBlocksEmail"
+                    "name": "fbEmail"
                 },{
-                    "name": "FormBlocksLoadAssets"
+                    "name": "fbLoadAssets"
                 },{
-                    "name": "FormBlocksStripAsAlias"
+                    "name": "fbStripAsAlias"
                 },{
-                    "name": "FormBlocksStripNonAlpha"
+                    "name": "fbStripNonAlpha"
                 }
             ],
 
             "plugins": [
                 {
-                    "name": "FormBlocksLexiconMgr",
+                    "name": "fbLexiconMgr",
                     "events": ["OnDocFormRender"]
                 },{
-                    "name": "FormBlocksLexiconWeb",
+                    "name": "fbLexiconWeb",
                     "events": ["OnHandleRequest"]
                 }
             ],
 
             "templates": [
                 {
-                    "name": "Form"
+                    "name": "fbForm"
                 }
             ],
 
             "tvs": [
                 {
                     "caption": "Email address recipient",
-                    "name": "form_email_to",
+                    "name": "fb_email_to",
                     "description": "Optional. If this field is empty, the form will be sent to the default email address of the website (which can be found under Extras > Configuration).",
                     "category": "Email settings",
                     "sortOrder": "1",
@@ -74,14 +84,14 @@
                     "templates": ["Form"]
                 },{
                     "caption": "Email subject",
-                    "name": "form_email_subject",
+                    "name": "fb_email_subject",
                     "category": "Email settings",
                     "sortOrder": "2",
                     "type": "text",
                     "templates": ["Form"]
                 },{
                     "caption": "Redirect page",
-                    "name": "form_redirect",
+                    "name": "fb_redirect_id",
                     "description": "Enter the ID of the page, or drag the page from the menu tree to this input field.",
                     "category": "General settings",
                     "sortOrder": "90",
@@ -89,14 +99,14 @@
                     "templates": ["Form"]
                 },{
                     "caption": "Text in submit button",
-                    "name": "form_submit_button",
+                    "name": "fb_submit_button",
                     "category": "General settings",
                     "sortOrder": "92",
                     "type": "text",
                     "templates": ["Form"]
                 },{
                     "caption": "Layout type",
-                    "name": "form_layout",
+                    "name": "fb_form_layout",
                     "description": "Stacked fields means the labels are always above the input fields, Horizontal fields means the labels are next to the fields, Inline fields means everything is on 1 row (so only for very small forms).",
                     "category": "General settings",
                     "sortOrder": "5",
@@ -106,7 +116,7 @@
                     "templates": ["Form"]
                 },{
                     "caption": "Email template",
-                    "name": "form_email_template",
+                    "name": "fb_email_template",
                     "description": "Optional. Name of the chunk containing your own customized (HTML) email template. Make sure there is a [[+content]] placeholder in there for listing the fields.",
                     "category": "Advanced settings",
                     "sortOrder": "20",
@@ -114,7 +124,7 @@
                     "templates": ["Form"]
                 },{
                     "caption": "Email template rows",
-                    "name": "form_email_template_rows",
+                    "name": "fb_email_template_rows",
                     "description": "Optional. Name of the chunk containing the customized HTML for the template rows. This will be used to display each individual field in your email. Use [[+label]] and [[+value]] placeholders to show the content.",
                     "category": "Advanced settings",
                     "sortOrder": "21",
@@ -130,13 +140,40 @@
                     "name": "General settings"
                 },{
                     "name": "Advanced settings"
+                },{
+                    "name": "Input types"
                 }
             ]
         },
 
         "systemSettings": [
             {
-                "key": "field_select_collapse_id",
+                "key": "cb_field_input_textfield_id",
+                "type": "textfield",
+                "area": "Pages",
+                "value": ""
+            },{
+                "key": "cb_field_input_textarea_id",
+                "type": "textfield",
+                "area": "Pages",
+                "value": ""
+            },{
+                "key": "cb_field_select_option_id",
+                "type": "textfield",
+                "area": "Pages",
+                "value": ""
+            },{
+                "key": "cb_field_select_option_collapse_id",
+                "type": "textfield",
+                "area": "Pages",
+                "value": ""
+            },{
+                "key": "cb_field_select_dropdown_id",
+                "type": "textfield",
+                "area": "Pages",
+                "value": ""
+            },{
+                "key": "cb_field_select_dropdown_auto_id",
                 "type": "textfield",
                 "area": "Pages",
                 "value": ""

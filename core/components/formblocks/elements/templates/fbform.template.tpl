@@ -6,11 +6,17 @@
     &emailRowTpl=`[[*form_email_template_rows:empty=`FormBlocksEmailRow`]]`
     &emailTo=`[[*form_email_to:empty=`[[++client_email:empty=`[[++email_sender]]`]]`]]`
     &emailSubject=`[[*form_email_subject:empty=`[[%formblocks.email.subject]]`]]`
-    &validate=`
-        workemail:blank`
+    &validate=``
     &submitVar=`submit-[[+title]]`
     &redirectTo=`[[*form_redirect]]`
 ]]
+
+[[cbGetFieldContent? &field=`[[++cb_field_input_textfield_id]]` &tpl=`FormBlocksValidateRow` &fieldSettingFilter=`field_required==1`]]
+[[cbGetFieldContent? &field=`[[++cb_field_input_textarea_id]]` &tpl=`FormBlocksValidateRow` &fieldSettingFilter=`field_required==1`]]
+[[cbGetFieldContent? &field=`[[++cb_field_select_option_id]]` &tpl=`FormBlocksValidateRow` &fieldSettingFilter=`field_required==1`]]
+[[cbGetFieldContent? &field=`[[++cb_field_select_option_collapse_id]]` &tpl=`FormBlocksValidateRow` &fieldSettingFilter=`field_required==1`]]
+[[cbGetFieldContent? &field=`[[++cb_field_select_dropdown_id]]` &tpl=`FormBlocksValidateRow` &fieldSettingFilter=`field_required==1`]]
+[[cbGetFieldContent? &field=`[[++cb_field_select_dropdown_auto_id]]` &tpl=`FormBlocksValidateRow` &fieldSettingFilter=`field_required==1`]]
 
 [[!+fi.validation_error_message:notempty=`
 <div class="alert alert-danger">
