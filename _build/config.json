@@ -3,7 +3,7 @@
     "lowCaseName": "formblocks",
     "description": "FormBlocks lets you create your own forms in MODX. It uses ContentBlocks to add the various fields you need and a slightly modified FormIt version to validate and submit the forms.",
     "author": "Hugo Peek",
-    "version": "0.4.3",
+    "version": "0.5.0",
 
     "package": {
         "elements": {
@@ -51,6 +51,9 @@
                 {
                     "name": "FormBlocksLexiconMgr",
                     "events": ["OnDocFormRender"]
+                },{
+                    "name": "FormBlocksLexiconWeb",
+                    "events": ["OnHandleRequest"]
                 }
             ],
 
@@ -62,56 +65,71 @@
 
             "tvs": [
                 {
-                    "caption": "E-mailadres ontvanger",
+                    "caption": "Email address recipient",
                     "name": "form_email_to",
-                    "category": "Instellingen",
+                    "description": "Optional. If this field is empty, the form will be sent to the default email address of the website (which can be found under Extras > Configuration).",
+                    "category": "Email settings",
                     "sortOrder": "1",
-                    "description": "Optioneel. Als dit veld leeg is, wordt het formulier automatisch naar het hoofdadres verzonden (in te stellen onder Extra's > Configuratie).",
                     "type": "email",
                     "templates": ["Form"]
                 },{
-                    "caption": "Onderwerp van e-mail",
+                    "caption": "Email subject",
                     "name": "form_email_subject",
-                    "category": "Algemeen",
+                    "category": "Email settings",
                     "sortOrder": "2",
-                    "description": "Je kan hier placeholders gebruiken van velden in het formulier (bijvoorbeeld: Reactie van [[+form_name]]).",
                     "type": "text",
                     "templates": ["Form"]
                 },{
-                    "caption": "Redirect pagina",
+                    "caption": "Redirect page",
                     "name": "form_redirect",
-                    "category": "Instellingen",
+                    "description": "Enter the ID of the page, or drag the page from the menu tree to this input field.",
+                    "category": "General settings",
                     "sortOrder": "90",
-                    "description": "Vul hier het ID in van de gewenste bedanktpagina, of sleep de pagina vanuit het menu dit invoerveld in.",
                     "type": "number",
                     "templates": ["Form"]
                 },{
-                    "caption": "Tekst in verzendknop",
+                    "caption": "Text in submit button",
                     "name": "form_submit_button",
-                    "category": "Algemeen",
+                    "category": "General settings",
                     "sortOrder": "92",
                     "type": "text",
                     "templates": ["Form"]
                 },{
-                    "caption": "Layout van formulier",
+                    "caption": "Layout type",
                     "name": "form_layout",
-                    "category": "Instellingen",
+                    "description": "Stacked fields means the labels are always above the input fields, Horizontal fields means the labels are next to the fields, Inline fields means everything is on 1 row (so only for very small forms).",
+                    "category": "General settings",
                     "sortOrder": "5",
-                    "description": "Standaard staan alle velden en labels onder elkaar, bij Inline staan de velden en labels naast elkaar (alleen geschikt voor kleine formulieren dus) en bij Horizontaal staan de labels naast de velden.",
                     "type": "listbox",
-                    "inputOptionValues": "Standaard layout==form-default||Horizontaal formulier==form-horizontal||Inline formulier==form-inline",
+                    "inputOptionValues": "Stacked fields==form-stacked||Horizontal fields==form-horizontal||Inline fields==form-inline",
                     "defaultValue": "form-horizontal",
+                    "templates": ["Form"]
+                },{
+                    "caption": "Email template",
+                    "name": "form_email_template",
+                    "description": "Optional. Name of the chunk containing your own customized (HTML) email template. Make sure there is a [[+content]] placeholder in there for listing the fields.",
+                    "category": "Advanced settings",
+                    "sortOrder": "20",
+                    "type": "text",
+                    "templates": ["Form"]
+                },{
+                    "caption": "Email template rows",
+                    "name": "form_email_template_rows",
+                    "description": "Optional. Name of the chunk containing the customized HTML for the template rows. This will be used to display each individual field in your email. Use [[+label]] and [[+value]] placeholders to show the content.",
+                    "category": "Advanced settings",
+                    "sortOrder": "21",
+                    "type": "text",
                     "templates": ["Form"]
                 }
             ],
 
             "categories": [
                 {
-                    "name": "Algemeen"
+                    "name": "Email settings"
                 },{
-                    "name": "Instellingen"
+                    "name": "General settings"
                 },{
-                    "name": "ContentBlocks"
+                    "name": "Advanced settings"
                 }
             ]
         },

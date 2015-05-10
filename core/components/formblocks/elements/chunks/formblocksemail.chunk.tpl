@@ -1,7 +1,3 @@
-Hier worden de velden opgehaald:<br><br>
+[[%formblocks.email.introtext]]<br><br>
 
-[[-!cbGetFieldContent?
-    &field=`26`
-    &resource=`10`
-    &tpl=`formBlocksEmailRow`
-]]
+[[+content]]

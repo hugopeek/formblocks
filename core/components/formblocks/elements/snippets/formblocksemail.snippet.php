@@ -1,6 +1,6 @@
 <?php
 /*
-Name: saveFormCustom.php
+Name: FormBlocksEmail.php
 Description: This hook will be able to use a pretty email
 */
 
@@ -20,7 +20,7 @@ $formName = (is_null($hook->formit->config['formName'])) ? 'form-'.$modx->resour
 
 /* Start email */
 $tplLayout = $modx->getOption('emailLayoutTpl', $formit->config, '');
-$tplRows = $modx->getOption('emailRowsTpl', $formit->config, 'mailRows');
+$tplRows = $modx->getOption('emailRowTpl', $formit->config, '');
 $emailHtml = (boolean)$modx->getOption('emailHtml', $formit->config, true);
 $emailConvertNewlines = (boolean)$modx->getOption('emailConvertNewlines', $formit->config, false);
 
@@ -69,7 +69,7 @@ if (empty($emailTo)) {
 $origFields = $fields;
 
 if (empty($tplLayout)) {
-    $tplLayout = 'mailLayout';
+    $tplLayout = 'emailLayoutTpl';
     $f = '';
     $multiSeparator = $modx->getOption('emailMultiSeparator', $formit->config, "\n");
     $multiWrapper = $modx->getOption('emailMultiWrapper', $formit->config, "[[+value]]");

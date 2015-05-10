@@ -1,3 +1,3 @@
-<strong>[[+field_name]]:</strong><br>
-[[+[[+name]]]]
+<strong>[[+label:replace=`E mail==E-mail`]]:</strong><br>
+[[+value]]
 <br><br>
