@@ -2,12 +2,12 @@ id:
 input: chunk
 name: 'Hidden Field'
 description: ''
-sortorder: 30
+sortorder:
 icon: snippet_B
 icon_type: core
 template: '[[+tag]]'
-properties: '{"chunk":"93","custom_preview":"<p><\/p>"}'
-availability: '[]'
+properties: '{"chunk":"","custom_preview":"<p><\/p>"}'
+availability: '[{"field":"template","value":""}]'
 layouts: ''
 times_per_layout: 0
 times_per_page: 0

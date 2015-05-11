@@ -1,0 +1,14 @@
+id:
+input: chunk
+name: Form
+description: 'Add a FormBlocks form here. You can create your own forms under Global Content > Forms'
+sortorder:
+icon: form
+icon_type: core
+template: '[[+value]]'
+properties: '{"chunk":"","custom_preview":"<p><em>Add a FormBlocks form here. You can create your own forms under Global Content > Forms.<\/em><\/p>"}'
+availability: '[]'
+layouts: ''
+times_per_layout: 0
+times_per_page: 0
+settings: '[{"reference":"form_id","title":"Form ID","fieldtype":"textfield","default_value":"","fieldoptions":"","field_is_exposed":"asField"}]'

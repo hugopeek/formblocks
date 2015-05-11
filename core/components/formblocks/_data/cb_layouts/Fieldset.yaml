@@ -1,12 +1,12 @@
 id:
 name: Fieldset
 description: ''
-sortorder: 13
+sortorder:
 icon: layout_1
 icon_type: core
 columns: '[{"reference":"main","width":"100"}]'
-template: "<fieldset id=\"[[+legend:FormBlocksStripAsAlias]]\" [[!cbGetFieldContent:contains=`\"[[+legend:FormBlocksStripAsAlias]]\"`:then=`class=\"collapse\"`? &field=`[[++formblocks.field_select_collapse_id]]` &returnAsJSON=`1`]]>\n    <legend>[[+legend]]</legend>\n    [[+main]]\n</fieldset>"
-availability: '[]'
+template: "<fieldset id=\"[[+legend:fbStripAsAlias]]\" [[!cbGetFieldContent:contains=`\"[[+legend:fbStripAsAlias]]\"`:then=`class=\"collapse\"`? &field=`[[++formblocks.cb_field_select_option_collapse_id]]` &returnAsJSON=`1`]]>\n    <legend>[[+legend]]</legend>\n    [[+main]]\n</fieldset>"
+availability: '[{"field":"template","value":""}]'
 times_per_page: 0
 layout_only_nested: '0'
 settings: '[{"reference":"legend","title":"Heading","fieldtype":"textfield","default_value":"","fieldoptions":"","field_is_exposed":"asSetting"}]'
