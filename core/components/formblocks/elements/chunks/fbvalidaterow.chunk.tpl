@@ -1,1 +1,1 @@
-[[+field_name:FormBlocksStripAsAlias]]:required<br>
+[[+field_name:fbStripAsAlias]]:required<br>

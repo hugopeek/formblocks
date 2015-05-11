@@ -1,22 +1,22 @@
-[[*pagetitle:FormBlocksStripAsAlias:toPlaceholder=`title`]]
+[[*pagetitle:fbStripAsAlias:toPlaceholder=`title`]]
 
 [[!FormIt?
-    &hooks=`spam,FormBlocksEmail,redirect`
-    &emailLayoutTpl=`[[*form_email_template:empty=`FormBlocksEmail`]]`
-    &emailRowTpl=`[[*form_email_template_rows:empty=`FormBlocksEmailRow`]]`
-    &emailTo=`[[*form_email_to:empty=`[[++client_email:empty=`[[++email_sender]]`]]`]]`
-    &emailSubject=`[[*form_email_subject:empty=`[[%formblocks.email.subject]]`]]`
+    &hooks=`spam,fbEmail,redirect`
+    &emailLayoutTpl=`[[*fb_email_template:empty=`fbEmail`]]`
+    &emailRowTpl=`[[*fb_email_template_rows:empty=`fbEmailRow`]]`
+    &emailTo=`[[*fb_email_to:empty=`[[++client_email:empty=`[[++email_sender]]`]]`]]`
+    &emailSubject=`[[*fb_email_subject:empty=`[[%formblocks.email.subject]]`]]`
     &validate=``
     &submitVar=`submit-[[+title]]`
-    &redirectTo=`[[*form_redirect]]`
+    &redirectTo=`[[*fb_redirect_id]]`
 ]]
 
-[[cbGetFieldContent? &field=`[[++cb_field_input_textfield_id]]` &tpl=`FormBlocksValidateRow` &fieldSettingFilter=`field_required==1`]]
-[[cbGetFieldContent? &field=`[[++cb_field_input_textarea_id]]` &tpl=`FormBlocksValidateRow` &fieldSettingFilter=`field_required==1`]]
-[[cbGetFieldContent? &field=`[[++cb_field_select_option_id]]` &tpl=`FormBlocksValidateRow` &fieldSettingFilter=`field_required==1`]]
-[[cbGetFieldContent? &field=`[[++cb_field_select_option_collapse_id]]` &tpl=`FormBlocksValidateRow` &fieldSettingFilter=`field_required==1`]]
-[[cbGetFieldContent? &field=`[[++cb_field_select_dropdown_id]]` &tpl=`FormBlocksValidateRow` &fieldSettingFilter=`field_required==1`]]
-[[cbGetFieldContent? &field=`[[++cb_field_select_dropdown_auto_id]]` &tpl=`FormBlocksValidateRow` &fieldSettingFilter=`field_required==1`]]
+[[-cbGetFieldContent? &field=`[[++formblocks.cb_field_input_textfield_id]]` &tpl=`fbValidateRow` &fieldSettingFilter=`field_required==1`]]
+[[-cbGetFieldContent? &field=`[[++formblocks.cb_field_input_textarea_id]]` &tpl=`fbValidateRow` &fieldSettingFilter=`field_required==1`]]
+[[-cbGetFieldContent? &field=`[[++formblocks.cb_field_select_option_id]]` &tpl=`fbValidateRow` &fieldSettingFilter=`field_required==1`]]
+[[-cbGetFieldContent? &field=`[[++formblocks.cb_field_select_option_collapse_id]]` &tpl=`fbValidateRow` &fieldSettingFilter=`field_required==1`]]
+[[-cbGetFieldContent? &field=`[[++formblocks.cb_field_select_dropdown_id]]` &tpl=`fbValidateRow` &fieldSettingFilter=`field_required==1`]]
+[[-cbGetFieldContent? &field=`[[++formblocks.cb_field_select_dropdown_auto_id]]` &tpl=`fbValidateRow` &fieldSettingFilter=`field_required==1`]]
 
 [[!+fi.validation_error_message:notempty=`
 <div class="alert alert-danger">
@@ -25,18 +25,18 @@
 </div>
 `]]
 
-<form id="form-[[+title]]" class="[[*form_layout]]" action="[[~[[+currentID]]]]" method="post" enctype="multipart/form-data">
+<form id="form-[[+title]]" class="[[*fb_form_layout]]" name="fb[[*id]]" action="[[~[[+currentID]]]]" method="post" enctype="multipart/form-data">
     <input type="text" name="workemail" class="hidden" value="">
 
     [[*content]]
 
     <fieldset>
         <div class="form-group submit">
-            [[*form_layout:is=`form-horizontal`:then=`<div class="col-sm-offset-4 col-sm-8">`]]
-                <input type="submit" value="[[*form_submit_button:default=`[[%formblocks.form.submit_button]]`]]" name="submit-[[+title]]" class="btn btn-primary">
-            [[*form_layout:is=`form-horizontal`:then=`</div>`]]
+            [[*fb_form_layout:is=`form-horizontal`:then=`<div class="col-sm-offset-4 col-sm-8">`]]
+                <button type="submit" name="submit-[[+title]]" class="btn btn-primary">[[*fb_submit_button:default=`[[%formblocks.form.submit_button]]`]]</button>
+            [[*fb_form_layout:is=`form-horizontal`:then=`</div>`]]
         </div>
     </fieldset>
 </form>
 
-[[FormBlocksLoadAssets]]
+[[fbLoadAssets]]

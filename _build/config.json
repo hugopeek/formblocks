@@ -3,7 +3,7 @@
     "lowCaseName": "formblocks",
     "description": "FormBlocks lets you create your own forms in MODX. It uses ContentBlocks to add the various fields you need and a slightly modified FormIt version to validate and submit the forms.",
     "author": "Hugo Peek",
-    "version": "0.6.0",
+    "version": "0.6.1",
 
     "package": {
         "elements": {
@@ -54,6 +54,8 @@
                     "name": "fbStripAsAlias"
                 },{
                     "name": "fbStripNonAlpha"
+                },{
+                    "name": "fbPrefixOutput"
                 }
             ],
 
@@ -81,14 +83,14 @@
                     "category": "Email settings",
                     "sortOrder": "1",
                     "type": "email",
-                    "templates": ["Form"]
+                    "templates": ["fbForm"]
                 },{
                     "caption": "Email subject",
                     "name": "fb_email_subject",
                     "category": "Email settings",
                     "sortOrder": "2",
                     "type": "text",
-                    "templates": ["Form"]
+                    "templates": ["fbForm"]
                 },{
                     "caption": "Redirect page",
                     "name": "fb_redirect_id",
@@ -96,14 +98,14 @@
                     "category": "General settings",
                     "sortOrder": "90",
                     "type": "number",
-                    "templates": ["Form"]
+                    "templates": ["fbForm"]
                 },{
                     "caption": "Text in submit button",
                     "name": "fb_submit_button",
                     "category": "General settings",
                     "sortOrder": "92",
                     "type": "text",
-                    "templates": ["Form"]
+                    "templates": ["fbForm"]
                 },{
                     "caption": "Layout type",
                     "name": "fb_form_layout",
@@ -111,9 +113,9 @@
                     "category": "General settings",
                     "sortOrder": "5",
                     "type": "listbox",
-                    "inputOptionValues": "Stacked fields==form-stacked||Horizontal fields==form-horizontal||Inline fields==form-inline",
+                    "inputOptionValues": "Vertical fields==form-default||Horizontal fields==form-horizontal||Inline fields==form-inline",
                     "defaultValue": "form-horizontal",
-                    "templates": ["Form"]
+                    "templates": ["fbForm"]
                 },{
                     "caption": "Email template",
                     "name": "fb_email_template",
@@ -121,7 +123,7 @@
                     "category": "Advanced settings",
                     "sortOrder": "20",
                     "type": "text",
-                    "templates": ["Form"]
+                    "templates": ["fbForm"]
                 },{
                     "caption": "Email template rows",
                     "name": "fb_email_template_rows",
@@ -129,7 +131,7 @@
                     "category": "Advanced settings",
                     "sortOrder": "21",
                     "type": "text",
-                    "templates": ["Form"]
+                    "templates": ["fbForm"]
                 }
             ],
 
