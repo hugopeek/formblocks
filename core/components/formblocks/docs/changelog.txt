@@ -1,5 +1,25 @@
 Changelog for FormBlocks
 
+++ FormBlocks 0.7.0-pl
+++ Released on 21-05-2015
++++++++++++++++++++++++++
+- Add validation
+
+++ FormBlocks 0.6.1-pl
+++ Released on 11-05-2015
++++++++++++++++++++++++++
+- Add unique prefix to field names and ID's
+
+++ FormBlocks 0.6.0-pl
+++ Released on 10-05-2015
++++++++++++++++++++++++++
+- Optimize filenaming (breaking change)
+
+++ FormBlocks 0.5.0-pl
+++ Released on 10-05-2015
++++++++++++++++++++++++++
+- Add auto-generated mail template
+
 ++ FormBlocks 0.4.3-pl
 ++ Released on 05-05-2015
 +++++++++++++++++++++++++

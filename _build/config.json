@@ -3,7 +3,7 @@
     "lowCaseName": "formblocks",
     "description": "FormBlocks lets you create your own forms in MODX. It uses ContentBlocks to add the various fields you need and a slightly modified FormIt version to validate and submit the forms.",
     "author": "Hugo Peek",
-    "version": "0.6.1",
+    "version": "0.7.0",
 
     "package": {
         "elements": {
@@ -40,8 +40,6 @@
                 },{
                     "name": "fbInputHidden",
                     "category": "Input types"
-                },{
-                    "name": "fbValidateRow"
                 }
             ],
 
@@ -56,6 +54,8 @@
                     "name": "fbStripNonAlpha"
                 },{
                     "name": "fbPrefixOutput"
+                },{
+                    "name": "fbValidateProcessJSON"
                 }
             ],
 
