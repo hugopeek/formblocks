@@ -1,5 +1,10 @@
 Changelog for FormBlocks
 
+++ FormBlocks 0.7.1-pl
+++ Released on 21-05-2015
++++++++++++++++++++++++++
+- Fix validation for select options and dropdowns
+
 ++ FormBlocks 0.7.0-pl
 ++ Released on 21-05-2015
 +++++++++++++++++++++++++

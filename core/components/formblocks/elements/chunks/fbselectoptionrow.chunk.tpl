@@ -1,4 +1,4 @@
-[[+field_name:fbStripAsAlias:toPlaceholder=`name`]]
+[[+field_name:fbStripAsAlias:fbPrefixOutput:toPlaceholder=`name`]]
 
 [[+option_layout:isnot=`inline`:then=`
 <div class="[[+field_type]]">
