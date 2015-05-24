@@ -1,3 +1,3 @@
-<strong>[[+label:replace=`E mail==E-mail`]]:</strong><br>
+<strong>[[+label]]:</strong><br>
 [[+value]]
 <br><br>

@@ -16,6 +16,7 @@
         [[cbGetFieldContent:notempty=`fb[[*id]]-accept-terms:required,`? &field=`[[++formblocks.cb_field_accept_terms_id]]`]]
         [[$fbValidateCustomFields]]
         workemail:blank`
+    &placeholderPrefix=`fb[[*id]].`
     &submitVar=`submit-[[+title]]`
     &redirectTo=`[[*fb_redirect_id]]`
 ]]
@@ -33,7 +34,7 @@
     </div>
 </div>]]
 
-[[!+fi.validation_error_message:notempty=`
+[[!+fb[[*id]].validation_error_message:notempty=`
 <div class="alert alert-danger">
     <button type="button" class="icon close" data-dismiss="alert"></button>
     [[%formblocks.form.validation_error]]
