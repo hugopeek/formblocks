@@ -40,6 +40,9 @@
                 },{
                     "name": "fbInputHidden",
                     "category": "Input types"
+                },{
+                    "name": "fbAcceptTerms",
+                    "category": "Input types"
                 }
             ],
 
@@ -176,6 +179,11 @@
                 "value": ""
             },{
                 "key": "cb_field_select_dropdown_auto_id",
+                "type": "textfield",
+                "area": "Pages",
+                "value": ""
+            },{
+                "key": "cb_field_accept_terms_id",
                 "type": "textfield",
                 "area": "Pages",
                 "value": ""

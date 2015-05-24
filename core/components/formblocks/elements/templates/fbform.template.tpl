@@ -7,12 +7,14 @@
     &emailTo=`[[*fb_email_to:empty=`[[++client_email:empty=`[[++email_sender]]`]]`]]`
     &emailSubject=`[[*fb_email_subject:empty=`[[%formblocks.email.subject]]`]]`
     &validate=`
-        [[cbGetFieldContent:fbValidateProcessJSON? &returnAsJSON=`1` &fieldSettingFilter=`field_required==1` &field=`[[++formblocks.cb_field_input_textfield_id]]`]]
-        [[cbGetFieldContent:fbValidateProcessJSON? &returnAsJSON=`1` &fieldSettingFilter=`field_required==1` &field=`[[++formblocks.cb_field_input_textarea_id]]`]]
-        [[cbGetFieldContent:fbValidateProcessJSON? &returnAsJSON=`1` &fieldSettingFilter=`field_required==1` &field=`[[++formblocks.cb_field_select_option_id]]`]]
-        [[cbGetFieldContent:fbValidateProcessJSON? &returnAsJSON=`1` &fieldSettingFilter=`field_required==1` &field=`[[++formblocks.cb_field_select_option_collapse_id]]`]]
-        [[cbGetFieldContent:fbValidateProcessJSON? &returnAsJSON=`1` &fieldSettingFilter=`field_required==1` &field=`[[++formblocks.cb_field_select_dropdown_id]]`]]
-        [[cbGetFieldContent:fbValidateProcessJSON? &returnAsJSON=`1` &fieldSettingFilter=`field_required==1` &field=`[[++formblocks.cb_field_select_dropdown_auto_id]]`]]
+        [[cbGetFieldContent:fbValidateProcessJSON:stripString=`[]`? &returnAsJSON=`1` &fieldSettingFilter=`field_required==1` &field=`[[++formblocks.cb_field_input_textfield_id]]`]]
+        [[cbGetFieldContent:fbValidateProcessJSON:stripString=`[]`? &returnAsJSON=`1` &fieldSettingFilter=`field_required==1` &field=`[[++formblocks.cb_field_input_textarea_id]]`]]
+        [[cbGetFieldContent:fbValidateProcessJSON:stripString=`[]`? &returnAsJSON=`1` &fieldSettingFilter=`field_required==1` &field=`[[++formblocks.cb_field_select_option_id]]`]]
+        [[cbGetFieldContent:fbValidateProcessJSON:stripString=`[]`? &returnAsJSON=`1` &fieldSettingFilter=`field_required==1` &field=`[[++formblocks.cb_field_select_option_collapse_id]]`]]
+        [[cbGetFieldContent:fbValidateProcessJSON:stripString=`[]`? &returnAsJSON=`1` &fieldSettingFilter=`field_required==1` &field=`[[++formblocks.cb_field_select_dropdown_id]]`]]
+        [[cbGetFieldContent:fbValidateProcessJSON:stripString=`[]`? &returnAsJSON=`1` &fieldSettingFilter=`field_required==1` &field=`[[++formblocks.cb_field_select_dropdown_auto_id]]`]]
+        [[cbGetFieldContent:notempty=`fb[[*id]]-accept-terms:required,`? &field=`[[++formblocks.cb_field_accept_terms_id]]`]]
+        [[$fbValidateCustomFields]]
         workemail:blank`
     &submitVar=`submit-[[+title]]`
     &redirectTo=`[[*fb_redirect_id]]`
@@ -20,13 +22,14 @@
 
 [[-<div class="row">
     <div class="col-md-12">
-        [[cbGetFieldContent:fbValidateProcessJSON? &returnAsJSON=`1` &fieldSettingFilter=`field_required==1` &field=`[[++formblocks.cb_field_input_textfield_id]]`]]
-        [[cbGetFieldContent:fbValidateProcessJSON? &returnAsJSON=`1` &fieldSettingFilter=`field_required==1` &field=`[[++formblocks.cb_field_input_textarea_id]]`]]
-        [[cbGetFieldContent:fbValidateProcessJSON? &returnAsJSON=`1` &fieldSettingFilter=`field_required==1` &field=`[[++formblocks.cb_field_select_option_id]]`]]
-        [[cbGetFieldContent:fbValidateProcessJSON? &returnAsJSON=`1` &fieldSettingFilter=`field_required==1` &field=`[[++formblocks.cb_field_select_option_collapse_id]]`]]
-        [[cbGetFieldContent:fbValidateProcessJSON? &returnAsJSON=`1` &fieldSettingFilter=`field_required==1` &field=`[[++formblocks.cb_field_select_dropdown_id]]`]]
-        [[cbGetFieldContent:fbValidateProcessJSON? &returnAsJSON=`1` &fieldSettingFilter=`field_required==1` &field=`[[++formblocks.cb_field_select_dropdown_auto_id]]`]]
-
+        [[cbGetFieldContent:fbValidateProcessJSON:stripString=`[]`? &returnAsJSON=`1` &fieldSettingFilter=`field_required==1` &field=`[[++formblocks.cb_field_input_textfield_id]]`]]
+        [[cbGetFieldContent:fbValidateProcessJSON:stripString=`[]`? &returnAsJSON=`1` &fieldSettingFilter=`field_required==1` &field=`[[++formblocks.cb_field_input_textarea_id]]`]]
+        [[cbGetFieldContent:fbValidateProcessJSON:stripString=`[]`? &returnAsJSON=`1` &fieldSettingFilter=`field_required==1` &field=`[[++formblocks.cb_field_select_option_id]]`]]
+        [[cbGetFieldContent:fbValidateProcessJSON:stripString=`[]`? &returnAsJSON=`1` &fieldSettingFilter=`field_required==1` &field=`[[++formblocks.cb_field_select_option_collapse_id]]`]]
+        [[cbGetFieldContent:fbValidateProcessJSON:stripString=`[]`? &returnAsJSON=`1` &fieldSettingFilter=`field_required==1` &field=`[[++formblocks.cb_field_select_dropdown_id]]`]]
+        [[cbGetFieldContent:fbValidateProcessJSON:stripString=`[]`? &returnAsJSON=`1` &fieldSettingFilter=`field_required==1` &field=`[[++formblocks.cb_field_select_dropdown_auto_id]]`]]
+        [[cbGetFieldContent:notempty=`fb[[*id]]-accept-terms:required,`? &field=`[[++formblocks.cb_field_accept_terms_id]]`]]
+        [[$fbValidateCustomFields]]
     </div>
 </div>]]
 
