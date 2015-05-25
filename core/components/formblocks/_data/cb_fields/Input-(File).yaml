@@ -1,6 +1,6 @@
 id:
 input: chunk
-name: 'File Input'
+name: 'Input (File)'
 description: ''
 sortorder:
 icon: attachment
