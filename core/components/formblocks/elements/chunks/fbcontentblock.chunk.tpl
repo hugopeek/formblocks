@@ -1,5 +1,5 @@
-[[!renderResources?
-    &parents=`-1`
-    &resources=`[[+form_id]]`
+[[!$fbRenderFormWrapper?
+    &formID=`[[+form_id]]`
     &currentID=`[[*id]]`
+    &currentPagetitle=`[[*pagetitle]]`
 ]]

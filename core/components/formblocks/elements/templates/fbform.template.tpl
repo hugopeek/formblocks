@@ -1,11 +1,12 @@
 [[*pagetitle:fbStripAsAlias:toPlaceholder=`title`]]
 
 [[!FormIt?
-    &hooks=`spam,fbEmail,redirect`
-    &emailLayoutTpl=`[[*fb_email_template:empty=`fbEmail`]]`
-    &emailRowTpl=`[[*fb_email_template_rows:empty=`fbEmailRow`]]`
+    &hooks=`spam,email,redirect`
+    &emailTpl=`[[*fb_email_template:empty=`fbEmail`]]`
     &emailTo=`[[*fb_email_to:empty=`[[++client_email:empty=`[[++email_sender]]`]]`]]`
     &emailSubject=`[[*fb_email_subject:empty=`[[%formblocks.email.subject]]`]]`
+
+    &customValidators=`requiredIf,requiredIfNot`
     &validate=`
         [[cbGetFieldContent:fbValidateProcessJSON:stripString=`[]`? &returnAsJSON=`1` &fieldSettingFilter=`field_required==1` &field=`[[++formblocks.cb_field_input_textfield_id]]`]]
         [[cbGetFieldContent:fbValidateProcessJSON:stripString=`[]`? &returnAsJSON=`1` &fieldSettingFilter=`field_required==1` &field=`[[++formblocks.cb_field_input_textarea_id]]`]]
@@ -21,7 +22,9 @@
     &redirectTo=`[[*fb_redirect_id]]`
 ]]
 
-[[-<div class="row">
+[[-
+<h3>Raw output of validation scripts</h3>
+<div class="row">
     <div class="col-md-12">
         [[cbGetFieldContent:fbValidateProcessJSON:stripString=`[]`? &returnAsJSON=`1` &fieldSettingFilter=`field_required==1` &field=`[[++formblocks.cb_field_input_textfield_id]]`]]
         [[cbGetFieldContent:fbValidateProcessJSON:stripString=`[]`? &returnAsJSON=`1` &fieldSettingFilter=`field_required==1` &field=`[[++formblocks.cb_field_input_textarea_id]]`]]
@@ -31,8 +34,16 @@
         [[cbGetFieldContent:fbValidateProcessJSON:stripString=`[]`? &returnAsJSON=`1` &fieldSettingFilter=`field_required==1` &field=`[[++formblocks.cb_field_select_dropdown_auto_id]]`]]
         [[cbGetFieldContent:notempty=`fb[[*id]]-accept-terms:required,`? &field=`[[++formblocks.cb_field_accept_terms_id]]`]]
         [[$fbValidateCustomFields]]
+        <br/><br/>
+        [[cbGetFieldContent:stripString=`[]`? &returnAsJSON=`1` &fieldSettingFilter=`field_required==1` &field=`[[++formblocks.cb_field_input_textfield_id]]`]]
+        [[cbGetFieldContent:stripString=`[]`? &returnAsJSON=`1` &fieldSettingFilter=`field_required==1` &field=`[[++formblocks.cb_field_input_textarea_id]]`]]
+        [[cbGetFieldContent:stripString=`[]`? &returnAsJSON=`1` &fieldSettingFilter=`field_required==1` &field=`[[++formblocks.cb_field_select_option_id]]`]]
+        [[cbGetFieldContent:stripString=`[]`? &returnAsJSON=`1` &fieldSettingFilter=`field_required==1` &field=`[[++formblocks.cb_field_select_option_collapse_id]]`]]
+        [[cbGetFieldContent:stripString=`[]`? &returnAsJSON=`1` &fieldSettingFilter=`field_required==1` &field=`[[++formblocks.cb_field_select_dropdown_id]]`]]
+        [[cbGetFieldContent:stripString=`[]`? &returnAsJSON=`1` &fieldSettingFilter=`field_required==1` &field=`[[++formblocks.cb_field_select_dropdown_auto_id]]`]]
     </div>
-</div>]]
+</div>
+]]
 
 [[!+fb[[*id]].validation_error_message:notempty=`
 <div class="alert alert-danger">

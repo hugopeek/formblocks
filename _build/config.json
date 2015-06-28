@@ -3,15 +3,17 @@
     "lowCaseName": "formblocks",
     "description": "FormBlocks lets you create your own forms in MODX. It uses ContentBlocks to add the various fields you need and a slightly modified FormIt version to validate and submit the forms.",
     "author": "Hugo Peek",
-    "version": "0.7.2",
+    "version": "0.8.0",
 
     "package": {
         "elements": {
             "chunks": [
                 {
-                    "name": "fbAutoresponder"
-                },{
                     "name": "fbContentBlock"
+                },{
+                    "name": "fbRenderFormWrapper"
+                },{
+                    "name": "fbAutoresponder"
                 },{
                     "name": "fbEmail"
                 },{
@@ -43,12 +45,23 @@
                 },{
                     "name": "fbAcceptTerms",
                     "category": "Input types"
+                },{
+                    "name": "fbEmailRow_settings",
+                    "category": "Email rows"
+                },{
+                    "name": "fbEmailRow_xx",
+                    "category": "Email rows"
+                },{
+                    "name": "fbEmailRow_xx_terms",
+                    "category": "Email rows"
                 }
             ],
 
             "snippets": [
                 {
                     "name": "fbEmail"
+                },{
+                    "name": "fbEmailGetJSON"
                 },{
                     "name": "fbLoadAssets"
                 },{
@@ -59,6 +72,8 @@
                     "name": "fbPrefixOutput"
                 },{
                     "name": "fbValidateProcessJSON"
+                },{
+                    "name": "fbSimplxWidgeteer"
                 }
             ],
 
@@ -147,6 +162,8 @@
                     "name": "Advanced settings"
                 },{
                     "name": "Input types"
+                },{
+                    "name": "Email rows"
                 }
             ]
         },

@@ -1,5 +1,10 @@
 Changelog for FormBlocks
 
+++ FormBlocks 0.8.0-pl
+++ Released on 28-06-2015
++++++++++++++++++++++++++
+- Refactored emailTpl (now built from CB JSON output)
+
 ++ FormBlocks 0.7.2-pl
 ++ Released on 25-05-2015
 +++++++++++++++++++++++++
