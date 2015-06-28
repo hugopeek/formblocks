@@ -1,5 +1,10 @@
 Changelog for FormBlocks
 
+++ FormBlocks 0.8.1-pl
+++ Released on 28-06-2015
++++++++++++++++++++++++++
+- Add fbContentBlockRow chunk, for easier selection with CB
+
 ++ FormBlocks 0.8.0-pl
 ++ Released on 28-06-2015
 +++++++++++++++++++++++++
