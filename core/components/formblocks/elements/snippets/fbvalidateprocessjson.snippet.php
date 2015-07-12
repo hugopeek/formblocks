@@ -36,6 +36,7 @@ if (!function_exists('search')) {
 // Function to strip required field names correctly
 // @todo: Replace this part with modx->runSnippet('fbStripAsAlias');
 if (!function_exists('stripResults')) {
+
     function stripResults($row) {
         $row = strip_tags($row); // strip HTML
         $row = strtolower($row); // convert to lowercase

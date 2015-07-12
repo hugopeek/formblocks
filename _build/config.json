@@ -172,6 +172,11 @@
 
         "systemSettings": [
             {
+                "key": "formit_save_form",
+                "type": "combo-boolean",
+                "area": "Settings",
+                "value": "1"
+            },{
                 "key": "cb_field_input_textfield_id",
                 "type": "textfield",
                 "area": "Pages",

@@ -4,6 +4,7 @@ Changelog for FormBlocks
 ++ Released on 28-06-2015
 +++++++++++++++++++++++++
 - Add fbContentBlockRow chunk, for easier selection with CB
+- Add xml file for importing fields in CB
 
 ++ FormBlocks 0.8.0-pl
 ++ Released on 28-06-2015

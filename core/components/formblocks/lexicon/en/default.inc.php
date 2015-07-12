@@ -24,6 +24,10 @@ $_lang['formblocks.collections.children'] = 'Forms';
 $_lang['formblocks.collections.children.create'] = 'Create new form';
 $_lang['formblocks.collections.children.back_to_collection_label'] = 'Back to FormBlocks overview';
 
+// ContentBlocks
+$_lang['formblocks.cb.input_textfield_description'] = 'You can select a different input type or add an optional placeholder in the Settings menu.';
+$_lang['formblocks.cb.input_textarea_description'] = 'You can add an optional placeholder in the Settings menu.';
+
 
 // Web context
 //-----------------------------------------------------

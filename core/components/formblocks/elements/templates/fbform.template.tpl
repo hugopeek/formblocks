@@ -1,21 +1,15 @@
 [[*pagetitle:fbStripAsAlias:toPlaceholder=`title`]]
 
 [[!FormIt?
-    &hooks=`spam,email,redirect`
+    &hooks=`spam,email,[[++formblocks.formit_save_form:eq=`1`:then=`FormItSaveForm,`]]redirect`
     &emailTpl=`[[*fb_email_template:empty=`fbEmail`]]`
     &emailTo=`[[*fb_email_to:empty=`[[++client_email:empty=`[[++email_sender]]`]]`]]`
     &emailSubject=`[[*fb_email_subject:empty=`[[%formblocks.email.subject]]`]]`
 
     &customValidators=`requiredIf,requiredIfNot`
     &validate=`
-        [[cbGetFieldContent:fbValidateProcessJSON:stripString=`[]`? &returnAsJSON=`1` &fieldSettingFilter=`field_required==1` &field=`[[++formblocks.cb_field_input_textfield_id]]`]]
-        [[cbGetFieldContent:fbValidateProcessJSON:stripString=`[]`? &returnAsJSON=`1` &fieldSettingFilter=`field_required==1` &field=`[[++formblocks.cb_field_input_textarea_id]]`]]
-        [[cbGetFieldContent:fbValidateProcessJSON:stripString=`[]`? &returnAsJSON=`1` &fieldSettingFilter=`field_required==1` &field=`[[++formblocks.cb_field_select_option_id]]`]]
-        [[cbGetFieldContent:fbValidateProcessJSON:stripString=`[]`? &returnAsJSON=`1` &fieldSettingFilter=`field_required==1` &field=`[[++formblocks.cb_field_select_option_collapse_id]]`]]
-        [[cbGetFieldContent:fbValidateProcessJSON:stripString=`[]`? &returnAsJSON=`1` &fieldSettingFilter=`field_required==1` &field=`[[++formblocks.cb_field_select_dropdown_id]]`]]
-        [[cbGetFieldContent:fbValidateProcessJSON:stripString=`[]`? &returnAsJSON=`1` &fieldSettingFilter=`field_required==1` &field=`[[++formblocks.cb_field_select_dropdown_auto_id]]`]]
-        [[cbGetFieldContent:notempty=`fb[[*id]]-accept-terms:required,`? &field=`[[++formblocks.cb_field_accept_terms_id]]`]]
-        [[$fbValidateCustomFields]]
+        [[!fbEmailGetJSON:fbValidateProcessJSON? &formID=`[[*id]]`]]
+        [[$fbValidateCustomFields:notempty=`[[$fbValidateCustomFields]]`]]
         workemail:blank`
     &placeholderPrefix=`fb[[*id]].`
     &submitVar=`submit-[[+title]]`
@@ -25,6 +19,9 @@
 [[-
 <h3>Raw output of validation scripts</h3>
 <div class="row">
+    <div class="col-md-12">
+        [[!fbEmailGetJSON:fbValidateProcessJSON? &formID=`[[*id]]`]]
+    </div>
     <div class="col-md-12">
         [[cbGetFieldContent:fbValidateProcessJSON:stripString=`[]`? &returnAsJSON=`1` &fieldSettingFilter=`field_required==1` &field=`[[++formblocks.cb_field_input_textfield_id]]`]]
         [[cbGetFieldContent:fbValidateProcessJSON:stripString=`[]`? &returnAsJSON=`1` &fieldSettingFilter=`field_required==1` &field=`[[++formblocks.cb_field_input_textarea_id]]`]]
@@ -49,6 +46,7 @@
 <div class="alert alert-danger">
     <button type="button" class="icon close" data-dismiss="alert"></button>
     [[%formblocks.form.validation_error]]
+    [[!+fb[[*id]].validation_error_message]]
 </div>
 `]]
 
