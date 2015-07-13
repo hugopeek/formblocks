@@ -6,7 +6,7 @@
         [[!+fb[[*id]].error.[[+name]]:notempty=`<span class="label label-danger">[[!+fb[[*id]].error.[[+name]]]]</span>`]]
         [[+rows]]
 
-        [[+option_other:notempty=`
+        [[+option_other:is=`1`:then=`
         <div class="[[+field_type]] other">
             <label>
                 <input type="[[+field_type]]"
@@ -16,6 +16,7 @@
                        value="[[+option_other_value]]"
                        data-group="no-group"
                        data-target="[[+name]]-other"
+                [[+field_helptext:notempty=`aria-describedby="help-[[+name]]"`]]
                 [[!+fb[[*id]].[[+name]]:FormItIsChecked=`[[+option_other_value]]`]]
                 >
                 [[+option_other_value]]

@@ -1,14 +1,11 @@
 id:
 input: chunk
-name: 'Hidden Field'
+name: 'Input (Hidden)'
 description: ''
 sortorder:
 icon: snippet_B
-icon_type: core
 template: '[[+tag]]'
 properties: '{"chunk":"","custom_preview":"<p><\/p>"}'
 availability: '[{"field":"template","value":""}]'
 layouts: ''
-times_per_layout: 0
-times_per_page: 0
 settings: '[{"reference":"field_name","title":"Label","fieldtype":"textfield","default_value":"","fieldoptions":"","field_is_exposed":"asField"},{"reference":"field_value","title":"Value","fieldtype":"textfield","default_value":"","fieldoptions":"","field_is_exposed":"asField"}]'

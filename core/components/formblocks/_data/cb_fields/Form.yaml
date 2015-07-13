@@ -1,14 +1,11 @@
 id:
 input: chunk
 name: Form
-description: 'Add a FormBlocks form here. You can create your own forms under Global Content > Forms'
+description: 'Add a form here. You can build your own forms with FormBlocks, under Content > Global Content > FormBlocks.'
 sortorder:
 icon: form
-icon_type: core
 template: '[[+value]]'
-properties: '{"chunk":"","custom_preview":"<p><em>Add a FormBlocks form here. You can create your own forms under Global Content > Forms.<\/em><\/p>"}'
+properties: '{"chunk":"","custom_preview":"<p><em>Add a form here. You can build your own forms with FormBlocks, under Content > Global Content > FormBlocks.<\/em><\/p>"}'
 availability: '[]'
 layouts: ''
-times_per_layout: 0
-times_per_page: 0
-settings: '[{"reference":"form_id","title":"Form ID","fieldtype":"textfield","default_value":"","fieldoptions":"","field_is_exposed":"asField"}]'
+settings: '[{"reference":"form_id","title":"Form","fieldtype":"select","default_value":"","fieldoptions":"[[getResources? &parents=`7` &limit=`99` &tpl=`fbContentBlockRow` &showHidden=`1` &showUnpublished=`1` &sortBy=`menuindex` &sortDir=`ASC`]]","field_is_exposed":"asField","process_tags":"1"}]'

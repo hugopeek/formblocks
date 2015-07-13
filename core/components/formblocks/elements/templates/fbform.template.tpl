@@ -46,7 +46,6 @@
 <div class="alert alert-danger">
     <button type="button" class="icon close" data-dismiss="alert"></button>
     [[%formblocks.form.validation_error]]
-    [[!+fb[[*id]].validation_error_message]]
 </div>
 `]]
 

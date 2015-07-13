@@ -4,11 +4,8 @@ name: 'Input (File)'
 description: ''
 sortorder:
 icon: attachment
-icon_type: core
 template: '[[+tag]]'
-properties: '{"chunk":"","custom_preview":"<p><em>You can select a different input type or add an optional placeholder in the Settings menu.<\/em><\/p>"}'
+properties: '{"chunk":"","custom_preview":"<p><em>Website visitors can upload a file through through this field. The file will be attached to the email.<\/em><\/p>"}'
 availability: '[{"field":"template","value":""}]'
 layouts: ''
-times_per_layout: 0
-times_per_page: 0
-settings: '[{"reference":"field_name","title":"Label","fieldtype":"textfield","default_value":"","fieldoptions":"","field_is_exposed":"asField"},{"reference":"field_layout","title":"Label position","fieldtype":"select","default_value":"[[*fb_form_layout]]","fieldoptions":"Inherit (from Form Layout)=[[*fb_form_layout]]\nAbove options=form-default\nLeft of options=form-horizontal","field_is_exposed":"modal"},{"reference":"field_helptext","title":"Help text","fieldtype":"textfield","default_value":"","fieldoptions":"","field_is_exposed":"modal"},{"reference":"field_required","title":"Required","fieldtype":"select","default_value":"1","fieldoptions":"Yes=1\nNo=0","field_is_exposed":"asField"}]'
+settings: '[{"reference":"field_name","title":"Label","fieldtype":"textfield","default_value":"","fieldoptions":"","field_is_exposed":"asField"},{"reference":"field_layout","title":"Label position","fieldtype":"select","default_value":"[[*fb_form_layout]]","fieldoptions":"Inherit (from Form Layout)=[[*fb_form_layout]]\nAbove options=form-default\nLeft of options=form-horizontal","field_is_exposed":"modal"},{"reference":"field_helptext","title":"Help text","fieldtype":"textfield","default_value":"","fieldoptions":"","field_is_exposed":"modal"},{"reference":"field_required","title":"Required","fieldtype":"select","default_value":"0","fieldoptions":"Yes=1\nNo=0","field_is_exposed":"asField"}]'

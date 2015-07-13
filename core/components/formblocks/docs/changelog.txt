@@ -1,5 +1,13 @@
 Changelog for FormBlocks
 
+++ FormBlocks 0.8.2-pl
+++ Released on 28-06-2015
++++++++++++++++++++++++++
+- Add "Other" field to select options
+- Fix collapse / expand issues
+- Fix bug with empty data-target
+- Fix issue with non-alpha characters breaking output
+
 ++ FormBlocks 0.8.1-pl
 ++ Released on 28-06-2015
 +++++++++++++++++++++++++

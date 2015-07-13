@@ -12,7 +12,7 @@ $('.collapse-radio').change(function() {
 
     // Show selected container, hide the rest
     if($(this).is(':checked')) {
-        $('.' + group).removeClass("in");
+        $('.' + group).collapse('hide');
         $('#' + target).collapse('show');
     } else {
         $('#' + target).collapse('hide');

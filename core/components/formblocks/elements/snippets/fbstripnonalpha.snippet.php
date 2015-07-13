@@ -1,5 +1,8 @@
 <?php
-$input = strip_tags($input); // strip HTML
-$input = preg_replace('/[^\.A-Za-z0-9 _-]/', '', $input); // strip non-alphanumeric characters
+$input = preg_replace('/[\&]/', '[and]', $input);
+$input = preg_replace('/[\?]/', '[qmark]', $input);
+$input = preg_replace('/[\;]/', '[semicolon]', $input);
+$input = preg_replace('/[\=]/', '[equals]', $input);
+$input = preg_replace('/[\`]/', '', $input);
 
 return $input;
