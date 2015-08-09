@@ -1,5 +1,10 @@
 Changelog for FormBlocks
 
+++ FormBlocks 0.9.1-pl
+++ Released on 09-08-2015
++++++++++++++++++++++++++
+- Fix email validation for new email CB
+
 ++ FormBlocks 0.9.0-pl
 ++ Released on 08-08-2015
 +++++++++++++++++++++++++

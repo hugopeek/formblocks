@@ -7,10 +7,11 @@
  * @author Hugo Peek
  */
 
+$input = $modx->getOption('json', $scriptProperties);
 $array = $modx->fromJSON($input);
 $id = $modx->resource->get('id');
 $prefix = !empty($prefix) ? $prefix: 'fb' . $id . '-';
-$emailField = $modx->getOption('emailField', $scriptProperties, 'E-mail');
+$emailField = $modx->getOption('emailField', $scriptProperties);
 
 //$jsonString = $modx->getOption('json', $scriptProperties);
 //$array = json_decode($jsonString, true);
@@ -58,7 +59,7 @@ $names = array();
 // Generate FormIt validation string for each result
 foreach ($results as $result) {
     if ($result['field_name'] == $emailField) {
-        $names[] = $prefix . stripResults($result['field_name']) . ":email:required,"; // Untested...
+        $names[] = $emailField . ":email:required,"; // Untested...
     } else {
         $names[] = $prefix . stripResults($result['field_name']) . ":required,";
     }

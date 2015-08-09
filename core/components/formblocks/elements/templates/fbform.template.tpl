@@ -21,7 +21,8 @@
 
     &customValidators=`requiredIf,requiredIfNot`
     &validate=`
-        [[!fbEmailGetJSON:fbValidateProcessJSON? &formID=`[[*id]]` &emailField=`fb[[*id]]-email`]]
+        [[!fbValidateProcessJson? &json=`[[!fbEmailGetJSON? &formID=`[[*id]]`]]`]]
+        [[cbGetFieldContent:notempty=`fb[[*id]]-email:email:required,`? &field=`[[++formblocks.cb_field_input_email_id]]`]]
         [[$fbValidateCustomFields:notempty=`[[$fbValidateCustomFields]]`]]
         workemail:blank`
     &placeholderPrefix=`fb[[*id]].`
