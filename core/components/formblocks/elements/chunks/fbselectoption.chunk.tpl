@@ -16,7 +16,7 @@
                        value="[[+option_other_value]]"
                        data-group="no-group"
                        data-target="[[+name]]-other"
-                [[+field_helptext:notempty=`aria-describedby="help-[[+name]]"`]]
+                [[+field_helptext:notempty=`aria-describedby="[[+name]]-help"`]]
                 [[!+fb[[*id]].[[+name]]:FormItIsChecked=`[[+option_other_value]]`]]
                 >
                 [[+option_other_value]]
@@ -28,6 +28,6 @@
         </div>
         `]]
 
-        [[+field_helptext:notempty=`<span id="help-[[+name]]" class="help-block">[[+field_helptext]]</span>`]]
+        [[+field_helptext:notempty=`<span id="[[+name]]-help" class="help-block">[[+field_helptext]]</span>`]]
     </div>
 </div>

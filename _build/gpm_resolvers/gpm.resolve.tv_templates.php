@@ -19,6 +19,14 @@ if ($object->xpdo) {
   array (
     0 => 'fbForm',
   ),
+  'fb_email_from' => 
+  array (
+    0 => 'fbForm',
+  ),
+  'fb_email_from_name' => 
+  array (
+    0 => 'fbForm',
+  ),
   'fb_email_subject' => 
   array (
     0 => 'fbForm',
@@ -40,6 +48,30 @@ if ($object->xpdo) {
     0 => 'fbForm',
   ),
   'fb_email_template_rows' => 
+  array (
+    0 => 'fbForm',
+  ),
+  'fb_autoresponder_toggle' => 
+  array (
+    0 => 'fbForm',
+  ),
+  'fb_autoresponder_from' => 
+  array (
+    0 => 'fbForm',
+  ),
+  'fb_autoresponder_from_name' => 
+  array (
+    0 => 'fbForm',
+  ),
+  'fb_autoresponder_reply_to' => 
+  array (
+    0 => 'fbForm',
+  ),
+  'fb_autoresponder_subject' => 
+  array (
+    0 => 'fbForm',
+  ),
+  'fb_autoresponder_message' => 
   array (
     0 => 'fbForm',
   ),

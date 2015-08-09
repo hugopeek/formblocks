@@ -16,7 +16,7 @@
                data-target="[[+collapse_target:default=`no-target`]]"
                data-toggle="collapse"
                [[!+fb[[*id]].[[+name]]:FormItIsChecked=`[[+field_option]]`]]
-               [[+field_helptext:notempty=`aria-describedby="help-[[+name]]"`]]
+               [[+field_helptext:notempty=`aria-describedby="[[+name]]-help"`]]
         >
         [[+option]]
     </label>

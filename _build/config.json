@@ -3,7 +3,7 @@
     "lowCaseName": "formblocks",
     "description": "FormBlocks lets you create your own forms in MODX. It uses ContentBlocks to add the various fields you need and a slightly modified FormIt version to validate and submit the forms.",
     "author": "Hugo Peek",
-    "version": "0.8.2",
+    "version": "0.9.0",
 
     "package": {
         "elements": {
@@ -25,6 +25,9 @@
                     "category": "Input types"
                 },{
                     "name": "fbInputTextarea",
+                    "category": "Input types"
+                },{
+                    "name": "fbInputEmail",
                     "category": "Input types"
                 },{
                     "name": "fbSelectDropdown",
@@ -68,6 +71,8 @@
                 },{
                     "name": "fbEmailGetJSON"
                 },{
+                    "name": "fbGetForms"
+                },{
                     "name": "fbLoadAssets"
                 },{
                     "name": "fbSimplxWidgeteer"
@@ -108,30 +113,47 @@
                 {
                     "caption": "Email address recipient",
                     "name": "fb_email_to",
-                    "description": "Optional. If this field is empty, the form will be sent to the default email address of the website (which can be found under Extras > Configuration).",
-                    "category": "Email settings",
+                    "description": "Submitted forms will be sent to this address. If this field is empty, the form will be sent to the default email address of the website (which can be found under Extras > Configuration).",
+                    "category": "Settings - Email",
                     "sortOrder": "1",
                     "type": "email",
                     "templates": ["fbForm"]
                 },{
+                    "caption": "Email FROM address",
+                    "name": "fb_email_from",
+                    "description": "Defaults to email_sender system setting.",
+                    "category": "Settings - Email",
+                    "sortOrder": "2",
+                    "type": "email",
+                    "templates": ["fbForm"]
+                },{
+                    "caption": "Email FROM name",
+                    "name": "fb_email_from_name",
+                    "description": "Defaults to site_name system setting.",
+                    "category": "Settings - Email",
+                    "sortOrder": "3",
+                    "type": "text",
+                    "templates": ["fbForm"]
+                },{
                     "caption": "Email subject",
                     "name": "fb_email_subject",
-                    "category": "Email settings",
-                    "sortOrder": "2",
+                    "category": "Settings - Email",
+                    "sortOrder": "10",
                     "type": "text",
                     "templates": ["fbForm"]
                 },{
                     "caption": "Redirect page",
                     "name": "fb_redirect_id",
                     "description": "Enter the ID of the page, or drag the page from the menu tree to this input field.",
-                    "category": "General settings",
+                    "category": "Settings - General",
                     "sortOrder": "90",
                     "type": "number",
                     "templates": ["fbForm"]
                 },{
                     "caption": "Text in submit button",
                     "name": "fb_submit_button",
-                    "category": "General settings",
+                    "description": "Defaults to Send.",
+                    "category": "Settings - General",
                     "sortOrder": "92",
                     "type": "text",
                     "templates": ["fbForm"]
@@ -139,7 +161,7 @@
                     "caption": "Layout type",
                     "name": "fb_form_layout",
                     "description": "Stacked fields means the labels are always above the input fields, Horizontal fields means the labels are next to the fields, Inline fields means everything is on 1 row (so only for very small forms).",
-                    "category": "General settings",
+                    "category": "Settings - General",
                     "sortOrder": "5",
                     "type": "listbox",
                     "inputOptionValues": "Vertical fields==form-default||Horizontal fields==form-horizontal||Inline fields==form-inline",
@@ -149,7 +171,7 @@
                     "caption": "Email template",
                     "name": "fb_email_template",
                     "description": "Optional. Name of the chunk containing your own customized (HTML) email template. Make sure there is a [[+content]] placeholder in there for listing the fields.",
-                    "category": "Advanced settings",
+                    "category": "Settings - Advanced",
                     "sortOrder": "20",
                     "type": "text",
                     "templates": ["fbForm"]
@@ -157,20 +179,70 @@
                     "caption": "Email template rows",
                     "name": "fb_email_template_rows",
                     "description": "Optional. Name of the chunk containing the customized HTML for the template rows. This will be used to display each individual field in your email. Use [[+label]] and [[+value]] placeholders to show the content.",
-                    "category": "Advanced settings",
+                    "category": "Settings - Advanced",
                     "sortOrder": "21",
                     "type": "text",
+                    "templates": ["fbForm"]
+                },{
+                    "caption": "Autoresponder",
+                    "name": "fb_autoresponder_toggle",
+                    "description": "When active, make sure to fill out all of the fields below.",
+                    "category": "Autoresponder",
+                    "sortOrder": "1",
+                    "type": "option",
+                    "inputOptionValues": "On==1||Off==0",
+                    "defaultValue": "0",
+                    "templates": ["fbForm"]
+                },{
+                    "caption": "Autoresponder FROM address",
+                    "name": "fb_autoresponder_from",
+                    "description": "This is the address where the messages appear to be sent from. Can be a non-existing address, like noreply@yourdomain.com. Defaults to email_sender system setting.",
+                    "category": "Autoresponder",
+                    "sortOrder": "2",
+                    "type": "email",
+                    "templates": ["fbForm"]
+                },{
+                    "caption": "Autoresponder FROM name",
+                    "name": "fb_autoresponder_from_name",
+                    "description": "This is the name that will (probably) be visible in the recipients' inbox. Defaults to site_name system setting.",
+                    "category": "Autoresponder",
+                    "sortOrder": "3",
+                    "type": "text",
+                    "templates": ["fbForm"]
+                },{
+                    "caption": "Autoresponder REPLY TO address",
+                    "name": "fb_autoresponder_reply_to",
+                    "description": "This address will be used when recipient replies to this message directly. Defaults to respectively the client_email and email_sender system setting.",
+                    "category": "Autoresponder",
+                    "sortOrder": "4",
+                    "type": "email",
+                    "templates": ["fbForm"]
+                },{
+                    "caption": "Autoresponse subject",
+                    "name": "fb_autoresponder_subject",
+                    "category": "Autoresponder",
+                    "sortOrder": "10",
+                    "type": "text",
+                    "templates": ["fbForm"]
+                },{
+                    "caption": "Autoresponse message",
+                    "name": "fb_autoresponder_message",
+                    "category": "Autoresponder",
+                    "sortOrder": "11",
+                    "type": "richtext",
                     "templates": ["fbForm"]
                 }
             ],
 
             "categories": [
                 {
-                    "name": "Email settings"
+                    "name": "Settings - Email"
                 },{
-                    "name": "General settings"
+                    "name": "Settings - General"
                 },{
-                    "name": "Advanced settings"
+                    "name": "Settings - Advanced"
+                },{
+                    "name": "Autoresponder"
                 },{
                     "name": "Input types"
                 },{
@@ -188,12 +260,22 @@
                 "area": "Settings",
                 "value": "1"
             },{
+                "key": "container_id",
+                "type": "textfield",
+                "area": "Pages",
+                "value": ""
+            },{
                 "key": "cb_field_input_textfield_id",
                 "type": "textfield",
                 "area": "Pages",
                 "value": ""
             },{
                 "key": "cb_field_input_textarea_id",
+                "type": "textfield",
+                "area": "Pages",
+                "value": ""
+            },{
+                "key": "cb_field_input_email_id",
                 "type": "textfield",
                 "area": "Pages",
                 "value": ""

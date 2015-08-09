@@ -1,5 +1,12 @@
 Changelog for FormBlocks
 
+++ FormBlocks 0.9.0-pl
+++ Released on 08-08-2015
++++++++++++++++++++++++++
+- Add autoresponder
+- Add separate Email input field
+- Add additional emailFrom TV's
+
 ++ FormBlocks 0.8.2-pl
 ++ Released on 28-06-2015
 +++++++++++++++++++++++++
