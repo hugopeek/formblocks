@@ -3,7 +3,7 @@
     "lowCaseName": "formblocks",
     "description": "FormBlocks lets you create your own forms in MODX. It uses ContentBlocks to add the various fields you need and a slightly modified FormIt version to validate and submit the forms.",
     "author": "Hugo Peek",
-    "version": "0.9.1",
+    "version": "0.9.2",
 
     "package": {
         "elements": {
@@ -58,6 +58,9 @@
                     "category": "Email rows"
                 },{
                     "name": "fbEmailRow_xx_terms",
+                    "category": "Email rows"
+                },{
+                    "name": "fbEmailRow_xx_email",
                     "category": "Email rows"
                 },{
                     "name": "fbStripWordsLabel",
@@ -119,19 +122,35 @@
                     "type": "email",
                     "templates": ["fbForm"]
                 },{
-                    "caption": "Email FROM address",
-                    "name": "fb_email_from",
-                    "description": "Defaults to email_sender system setting.",
+                    "caption": "Email CC address",
+                    "name": "fb_email_cc",
+                    "description": "Optional.",
                     "category": "Settings - Email",
                     "sortOrder": "2",
                     "type": "email",
                     "templates": ["fbForm"]
                 },{
-                    "caption": "Email FROM name",
-                    "name": "fb_email_from_name",
-                    "description": "Defaults to site_name system setting.",
+                    "caption": "Email BCC address",
+                    "name": "fb_email_bcc",
+                    "description": "Optional.",
                     "category": "Settings - Email",
                     "sortOrder": "3",
+                    "type": "email",
+                    "templates": ["fbForm"]
+                },{
+                    "caption": "Email FROM address",
+                    "name": "fb_email_from",
+                    "description": "Optional. Defaults to email_sender system setting.",
+                    "category": "Settings - Email",
+                    "sortOrder": "5",
+                    "type": "email",
+                    "templates": ["fbForm"]
+                },{
+                    "caption": "Email FROM name",
+                    "name": "fb_email_from_name",
+                    "description": "Optional. Defaults to site_name system setting.",
+                    "category": "Settings - Email",
+                    "sortOrder": "6",
                     "type": "text",
                     "templates": ["fbForm"]
                 },{

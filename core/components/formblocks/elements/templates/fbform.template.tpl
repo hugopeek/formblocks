@@ -1,23 +1,23 @@
 [[*pagetitle:fbStripAsAlias:toPlaceholder=`title`]]
 
 [[!FormIt?
-    &hooks=`spam,email,[[++formblocks.formit_save_form:eq=`1`:then=`FormItSaveForm,`]]redirect`
+    &hooks=`spam,email,[[*fb_autoresponder_toggle:eq=`1`:then=`FormItAutoResponder,`]][[++formblocks.formit_save_form:eq=`1`:then=`FormItSaveForm,`]]redirect`
 
     &emailTpl=`[[*fb_email_template:empty=`fbEmail`]]`
-    &emailTo=`[[*fb_email_to:empty=`[[++client_email:empty=`[[++email_sender]]`]]`]]`
-    &emailFrom=`[[*fb_email_from:empty=`[[++email_sender]]`]]`
+    &emailTo=`[[*fb_email_to:empty=`[[++client_email:empty=`[[++emailsender]]`]]`]]`
+    &emailCC=`[[*fb_email_cc]]`
+    &emailBCC=`[[*fb_email_bcc]]`
+    &emailFrom=`[[*fb_email_from:empty=`[[++emailsender]]`]]`
     &emailFromName=`[[*fb_email_from_name:empty=`[[++site_name]]`]]`
-    &emailReplyTo=`fb[[*id]]-email`
+    &emailReplyTo=`[[cbGetFieldContent:notempty=`[[+fb[[*id]]-email]]`? &field=`[[++formblocks.cb_field_input_email_id]]`]]`
     &emailSubject=`[[*fb_email_subject:empty=`[[%formblocks.email.subject]]`]]`
 
-    [[*fb_autoresponder:notempty=`
     &fiarTpl=`fbAutoresponder`
-    &fiarToField=`fb[[*id]]-email`
-    &fiarFrom=`[[*fb_autoresponder_from:empty=`[[++email_sender]]`]]`
+    &fiarToField=`[[*fb_autoresponder_toggle:eq=`1`:then=`fb[[*id]]-email`]]`
+    &fiarFrom=`[[*fb_autoresponder_from:empty=`[[++emailsender]]`]]`
     &fiarFromName=`[[*fb_autoresponder_from_name:empty=`[[++site_name]]`]]`
-    &fiarReplyTo=`[[*fb_autoresponder_reply_to:empty=`[[++client_email:empty=`[[++email_sender]]`]]`]]`
+    &fiarReplyTo=`[[*fb_autoresponder_reply_to:empty=`[[++client_email:empty=`[[++emailsender]]`]]`]]`
     &fiarSubject=`[[*fb_autoresponder_subject:empty=`[[%formblocks.autoresponder.subject]]`]]`
-    `]]
 
     &customValidators=`requiredIf,requiredIfNot`
     &validate=`

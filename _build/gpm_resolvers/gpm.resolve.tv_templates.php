@@ -19,6 +19,14 @@ if ($object->xpdo) {
   array (
     0 => 'fbForm',
   ),
+  'fb_email_cc' => 
+  array (
+    0 => 'fbForm',
+  ),
+  'fb_email_bcc' => 
+  array (
+    0 => 'fbForm',
+  ),
   'fb_email_from' => 
   array (
     0 => 'fbForm',
