@@ -9,15 +9,26 @@
     &emailBCC=`[[*fb_email_bcc]]`
     &emailFrom=`[[*fb_email_from:empty=`[[++emailsender]]`]]`
     &emailFromName=`[[*fb_email_from_name:empty=`[[++site_name]]`]]`
-    &emailReplyTo=`[[cbGetFieldContent:notempty=`[[+fb[[*id]]-email]]`? &field=`[[++formblocks.cb_field_input_email_id]]`]]`
+    [[!If?
+        &subject=`[[cbGetFieldContent? &field=`[[++formblocks.cb_field_input_email_id]]`]]`
+        &operator=`notempty`
+        &then=`&emailReplyTo=`[[+fb[[*id]]-email]]``
+    ]]
     &emailSubject=`[[*fb_email_subject:empty=`[[%formblocks.email.subject]]`]]`
 
-    &fiarTpl=`fbAutoresponder`
-    &fiarToField=`[[*fb_autoresponder_toggle:eq=`1`:then=`fb[[*id]]-email`]]`
-    &fiarFrom=`[[*fb_autoresponder_from:empty=`[[++emailsender]]`]]`
-    &fiarFromName=`[[*fb_autoresponder_from_name:empty=`[[++site_name]]`]]`
-    &fiarReplyTo=`[[*fb_autoresponder_reply_to:empty=`[[++client_email:empty=`[[++emailsender]]`]]`]]`
-    &fiarSubject=`[[*fb_autoresponder_subject:empty=`[[%formblocks.autoresponder.subject]]`]]`
+    [[!If?
+        &subject=`[[*fb_autoresponder_toggle]]`
+        &operator=`EQ`
+        &operand=`1`
+        &then=`
+            &fiarTpl=`fbAutoresponder`
+            &fiarToField=`fb[[*id]]-email`
+            &fiarFrom=`[[*fb_autoresponder_from:empty=`[[++emailsender]]`]]`
+            &fiarFromName=`[[*fb_autoresponder_from_name:empty=`[[++site_name]]`]]`
+            &fiarReplyTo=`[[*fb_autoresponder_reply_to:empty=`[[++client_email:empty=`[[++emailsender]]`]]`]]`
+            &fiarSubject=`[[*fb_autoresponder_subject:empty=`[[%formblocks.autoresponder.subject]]`]]`
+        `
+    ]]
 
     &customValidators=`requiredIf,requiredIfNot`
     &validate=`

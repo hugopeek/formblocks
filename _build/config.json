@@ -3,7 +3,7 @@
     "lowCaseName": "formblocks",
     "description": "FormBlocks lets you create your own forms in MODX. It uses ContentBlocks to add the various fields you need and a slightly modified FormIt version to validate and submit the forms.",
     "author": "Hugo Peek",
-    "version": "0.9.2",
+    "version": "0.9.3",
 
     "package": {
         "elements": {
@@ -140,7 +140,7 @@
                 },{
                     "caption": "Email FROM address",
                     "name": "fb_email_from",
-                    "description": "Optional. Defaults to email_sender system setting.",
+                    "description": "Optional. Defaults to emailsender system setting.",
                     "category": "Settings - Email",
                     "sortOrder": "5",
                     "type": "email",
@@ -205,7 +205,7 @@
                 },{
                     "caption": "Autoresponder",
                     "name": "fb_autoresponder_toggle",
-                    "description": "When active, make sure to fill out all of the fields below.",
+                    "description": "IMPORTANT! For the autoresponder to know which email address to use, the Input (Email) field needs to be present in the form.",
                     "category": "Autoresponder",
                     "sortOrder": "1",
                     "type": "option",
@@ -215,7 +215,7 @@
                 },{
                     "caption": "Autoresponder FROM address",
                     "name": "fb_autoresponder_from",
-                    "description": "This is the address where the messages appear to be sent from. Can be a non-existing address, like noreply@yourdomain.com. Defaults to email_sender system setting.",
+                    "description": "Optional. This is the address where the messages appear to be sent from. Can be a non-existing address, like noreply@yourdomain.com. Defaults to emailsender system setting.",
                     "category": "Autoresponder",
                     "sortOrder": "2",
                     "type": "email",
@@ -223,7 +223,7 @@
                 },{
                     "caption": "Autoresponder FROM name",
                     "name": "fb_autoresponder_from_name",
-                    "description": "This is the name that will (probably) be visible in the recipients' inbox. Defaults to site_name system setting.",
+                    "description": "Optional. This is the name that will (probably) be visible in the recipients' inbox. Defaults to site_name system setting.",
                     "category": "Autoresponder",
                     "sortOrder": "3",
                     "type": "text",
@@ -231,7 +231,7 @@
                 },{
                     "caption": "Autoresponder REPLY TO address",
                     "name": "fb_autoresponder_reply_to",
-                    "description": "This address will be used when recipient replies to this message directly. Defaults to respectively the client_email and email_sender system setting.",
+                    "description": "Optional. This address will be used when recipient replies to this message directly. Defaults to respectively the client_email and emailsender system setting.",
                     "category": "Autoresponder",
                     "sortOrder": "4",
                     "type": "email",
@@ -239,6 +239,7 @@
                 },{
                     "caption": "Autoresponse subject",
                     "name": "fb_autoresponder_subject",
+                    "description": "",
                     "category": "Autoresponder",
                     "sortOrder": "10",
                     "type": "text",
@@ -246,6 +247,7 @@
                 },{
                     "caption": "Autoresponse message",
                     "name": "fb_autoresponder_message",
+                    "description": "This is the content of the email that will be sent. You can use placeholders here from the form fields you used. Just make sure they are the exact same names as in the HTML, complete with prefix.",
                     "category": "Autoresponder",
                     "sortOrder": "11",
                     "type": "richtext",
