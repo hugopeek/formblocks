@@ -4,6 +4,7 @@ site_dir: _build/site
 repo_url: https://github.com/Qaraqter/formblocks.git
 pages:
 - [index.md, Home]
+- [config/overview.md, Configuration, Installation overview]
 - [config/cb-import.md, Configuration, Import CB elements]
 - [config/cb-settings.md, Configuration, Configure CB elements]
 - [config/system-settings.md, Configuration, System settings]
@@ -12,5 +13,5 @@ pages:
 - [fields/input.md, ContentBlocks Fields, Input fields]
 - [fields/select.md, ContentBlocks Fields, Selectable options]
 - [fields/accept-terms.md, ContentBlocks Fields, Accept Terms checkbox]
-- [notes/notes.md, Notes, Notes]
+- [notes/notes.md, Notes, Additional information]
 theme: readthedocs
