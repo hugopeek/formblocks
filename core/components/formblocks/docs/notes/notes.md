@@ -1,12 +1,16 @@
 ## Limitations
 
-#### Unable to validate fields inside show/hide fieldsets
+### Unable to validate fields inside show/hide fieldsets
 
 Please make sure that none of the fields inside a collapsible fields is required.
 
-#### Unable to handle duplicate labels / fieldnames
+### Unable to handle duplicate labels / fieldnames
 
 There is a quickfix available: just add a _suffix with a number ranging from 2-10 to the label name. So if you want to have 2 labels called Name in your form, add the first one as *Name* and the second one as *Name_2*.
+
+### The Email template rows TV under Settings - Advanced doesn't work
+
+Overruling the default email tpl should work, but the rows are defined now using fbSimplxWidgeteer. So if you want to edit the individual rows for each field type, look there..
 
 ## Roadmap
 
