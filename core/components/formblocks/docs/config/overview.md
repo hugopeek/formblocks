@@ -15,4 +15,5 @@ After installing the package, there’s a few extra things that need doing:
 - FormIt
 - getResources
 - renderResources
+- If
 - Twitter Bootstrap 3 (only for the front-end)
