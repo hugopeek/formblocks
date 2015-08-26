@@ -1,4 +1,9 @@
-# How to install FormBlocks
+# FormBlocks introduction
+
+Forms are often a bit of a hassle to create. Slightly different input fields each time, writing tedious HTML markup, typo's or little mistakes screwing up validation... I don't think anyone really likes building them.
+Except end-users themselves, but they lack the proper tools to do this wi
+
+## How to install FormBlocks
 
 After installing the package, there’s a few extra things that need doing:
 
@@ -15,3 +20,4 @@ After installing the package, there’s a few extra things that need doing:
 - FormIt
 - getResources
 - renderResources
+- Twitter Bootstrap 3 (only for the front-end)

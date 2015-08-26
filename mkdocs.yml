@@ -4,11 +4,13 @@ site_dir: _build/site
 repo_url: https://github.com/Qaraqter/formblocks.git
 pages:
 - [index.md, Home]
-- [config/cb-import.md, Config, Import CB elements]
-- [config/cb-settings.md, Config, Configure CB elements]
-- [fields/form.md, CB Fields, Form]
-- [fields/input.md, CB Fields, Input fields]
-- [fields/select.md, CB Fields, Selectable options]
-- [fields/accept-terms.md, CB Fields, Accept terms checkbox]
-- [notes/limitations.md, Notes, Limitations]
+- [config/cb-import.md, Configuration, Import CB elements]
+- [config/cb-settings.md, Configuration, Configure CB elements]
+- [config/system-settings.md, Configuration, System settings]
+- [config/email-rows.md, Configuration, Email row chunks]
+- [fields/form.md, ContentBlocks Fields, Form field]
+- [fields/input.md, ContentBlocks Fields, Input fields]
+- [fields/select.md, ContentBlocks Fields, Selectable options]
+- [fields/accept-terms.md, ContentBlocks Fields, Accept Terms checkbox]
+- [notes/notes.md, Notes, Notes]
 theme: readthedocs

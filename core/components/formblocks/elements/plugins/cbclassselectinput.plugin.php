@@ -6,7 +6,7 @@
  */
 if ($modx->event->name == 'ContentBlocks_RegisterInputs') {
     // Load your own class. No need to require cbBaseInput, that's already loaded.
-    $path = $modx->getOption('bootqamp.core_path', null, MODX_CORE_PATH . 'components/bootqamp/');
+    $path = $modx->getOption('formblocks.core_path', null, MODX_CORE_PATH . 'components/formblocks/');
     require_once($path . 'elements/inputs/selectinput.class.php');
     
     // Create an instance of your input type, passing the $contentBlocks var

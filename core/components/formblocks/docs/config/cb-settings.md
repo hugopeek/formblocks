@@ -6,16 +6,10 @@
 
 ### Chunk fields:
 
-Form - fbContentBlock
-Input (Textfield) - fbInputTextfield
-Input (Textarea) - fbInputTextarea
-Input (Email) - fbInputEmail
-Input (File) - fbInputFile
-Input (Hidden) - fbInputHidden
-Accept Terms and Conditions - fbAcceptTerms
-
-## Set FormBlocks system settings
-
-- Set all corresponding CB field ID's
-- Set ID of resource containing the forms
-- Turn FormItSaveForm on (optional)
+- Form - fbContentBlock
+- Input (Textfield) - fbInputTextfield
+- Input (Textarea) - fbInputTextarea
+- Input (Email) - fbInputEmail
+- Input (File) - fbInputFile
+- Input (Hidden) - fbInputHidden
+- Accept Terms and Conditions - fbAcceptTerms
