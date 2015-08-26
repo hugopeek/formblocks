@@ -1,9 +1,11 @@
 Changelog for FormBlocks
 
 ++ FormBlocks 0.9.3-pl
-++ Released on 13-08-2015
+++ Released on 26-08-2015
 +++++++++++++++++++++++++
 - Fix forms not sending when email input field is not used
+- Add latest CB xml exports
+- Add readthedocs readme files
 
 ++ FormBlocks 0.9.2-pl
 ++ Released on 13-08-2015

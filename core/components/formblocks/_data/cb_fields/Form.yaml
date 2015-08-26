@@ -2,10 +2,10 @@ id:
 input: chunk
 name: Form
 description: 'Add a form here. You can build your own forms with FormBlocks, under Content > Global Content > FormBlocks.'
-sortorder:
+sortorder: 14
 icon: form
 template: '[[+value]]'
 properties: '{"chunk":"","custom_preview":"<p><em>Add a form here. You can build your own forms with FormBlocks, under Content > Global Content > FormBlocks.<\/em><\/p>"}'
 availability: '[]'
 layouts: ''
-settings: '[{"reference":"form_id","title":"Form","fieldtype":"select","default_value":"","fieldoptions":"[[fbGetForms]]","field_is_exposed":"asField","process_tags":"1"}]'
+settings: '[{"reference":"form_id","title":"Form","fieldtype":"select","default_value":"","fieldoptions":"\n[[fbGetForms]]","field_is_exposed":"asField","process_tags":"1"}]'

@@ -2,7 +2,7 @@ id:
 input: code
 name: 'Select Dropdown (with Auto Options)'
 description: ''
-sortorder:
+sortorder: 30
 icon: snippet_A
 template: "[[$fbSelectDropdown?\n    &field_layout=`[[+field_layout]]`\n    &field_name=`[[+field_name]]`\n    &field_option=`[[+field_option]]`\n    &field_default=`[[+field_default]]`\n    &field_helptext=`[[+field_helptext]]`\n    &field_required=`[[+field_required]]`\n    &rows=`[[+value]]`\n    &unique_idx=`[[+unique_idx]]`\n]]"
 properties: '{"available_languages":"html=HTML","default_language":"html","entities":"0"}'

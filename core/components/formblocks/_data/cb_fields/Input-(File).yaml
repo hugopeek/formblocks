@@ -2,10 +2,10 @@ id:
 input: chunk
 name: 'Input (File)'
 description: ''
-sortorder:
+sortorder: 25
 icon: attachment
 template: '[[+tag]]'
-properties: '{"chunk":"","custom_preview":"<p><em>Website visitors can upload a file through through this field. The file will be attached to the email.<\/em><\/p>"}'
+properties: '{"chunk":"","custom_preview":"<p><em>Visitors can upload a single file through this field.<\/em><\/p>"}'
 availability: '[{"field":"template","value":""}]'
 layouts: ''
 settings: '[{"reference":"field_name","title":"Label","fieldtype":"textfield","default_value":"","fieldoptions":"","field_is_exposed":"asField"},{"reference":"field_layout","title":"Label position","fieldtype":"select","default_value":"[[*fb_form_layout]]","fieldoptions":"Inherit (from Form Layout)=[[*fb_form_layout]]\nAbove options=form-default\nLeft of options=form-horizontal","field_is_exposed":"modal"},{"reference":"field_helptext","title":"Help text","fieldtype":"textfield","default_value":"","fieldoptions":"","field_is_exposed":"modal"},{"reference":"field_required","title":"Required","fieldtype":"select","default_value":"0","fieldoptions":"Yes=1\nNo=0","field_is_exposed":"asField"}]'

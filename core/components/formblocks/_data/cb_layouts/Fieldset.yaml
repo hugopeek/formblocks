@@ -1,9 +1,8 @@
 id:
 name: Fieldset
-description: ''
-sortorder:
-icon: layout_1
-icon_type: core
+description: 'Only available in forms. With fieldsets, you can section your forms in different blocks, each with its own header.'
+sortorder: 17
+icon: form
 columns: '[{"reference":"main","width":"100"}]'
 template: "<fieldset id=\"[[+legend:fbStripAsAlias]]\" [[!cbGetFieldContent:contains=`\"[[+legend:fbStripAsAlias]]\"`:then=`class=\"collapse\"`? &field=`[[++formblocks.cb_field_select_option_collapse_id]]` &returnAsJSON=`1`]]>\n    <legend>[[+legend]]</legend>\n    [[+main]]\n</fieldset>"
 availability: '[{"field":"template","value":""}]'

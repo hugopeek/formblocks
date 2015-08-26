@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<data package="contentblocks" exported="2015-06-28@19:44:02" total="1">
-    <cbLayout>
-        <id></id>
-        <name><![CDATA[Fieldset]]></name>
-        <description><![CDATA[]]></description>
-        <sortorder>13</sortorder>
-        <icon><![CDATA[form]]></icon>
-        <icon_type><![CDATA[core]]></icon_type>
-        <columns><![CDATA[[{"reference":"main","width":"100"}]]]></columns>
-        <template><![CDATA[<fieldset id="[[+legend:fbStripAsAlias]]" [[!cbGetFieldContent:contains=`"[[+legend:fbStripAsAlias]]"`:then=`class="collapse"`? &field=`[[++formblocks.cb_field_select_option_collapse_id]]` &returnAsJSON=`1`]]]]><![CDATA[>
-            <legend>[[+legend]]</legend>
-            [[+main]]
-        </fieldset>]]></template>
-        <availability><![CDATA[[]]]></availability>
-        <times_per_page>0</times_per_page>
-        <layout_only_nested>0</layout_only_nested>
-        <settings><![CDATA[[{"reference":"legend","title":"Heading","fieldtype":"textfield","default_value":"","fieldoptions":"","field_is_exposed":"asSetting"}]]]></settings>
-    </cbLayout>
+<data package="contentblocks" exported="2015-08-25@13:15:59" total="1">
+<cbLayout>
+	<id></id>
+	<name><![CDATA[Fieldset]]></name>
+	<description><![CDATA[Only available in forms. With fieldsets, you can section your forms in different blocks, each with its own header.]]></description>
+	<sortorder>17</sortorder>
+	<icon><![CDATA[form]]></icon>
+	<icon_type><![CDATA[core]]></icon_type>
+	<columns><![CDATA[[{"reference":"main","width":"100"}]]]></columns>
+	<template><![CDATA[<fieldset id="[[+legend:fbStripAsAlias]]" [[!cbGetFieldContent:contains=`"[[+legend:fbStripAsAlias]]"`:then=`class="collapse"`? &field=`[[++formblocks.cb_field_select_option_collapse_id]]` &returnAsJSON=`1`]]]]><![CDATA[>
+    <legend>[[+legend]]</legend>
+    [[+main]]
+</fieldset>]]></template>
+	<availability><![CDATA[[{"field":"template","value":""}]]]></availability>
+	<times_per_page>0</times_per_page>
+	<layout_only_nested>0</layout_only_nested>
+	<settings><![CDATA[[{"reference":"legend","title":"Heading","fieldtype":"textfield","default_value":"","fieldoptions":"","field_is_exposed":"asSetting"}]]]></settings>
+</cbLayout>
 </data>

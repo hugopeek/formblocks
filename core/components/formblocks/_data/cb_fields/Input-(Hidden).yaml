@@ -2,10 +2,10 @@ id:
 input: chunk
 name: 'Input (Hidden)'
 description: ''
-sortorder:
+sortorder: 26
 icon: snippet_B
 template: '[[+tag]]'
 properties: '{"chunk":"","custom_preview":"<p><\/p>"}'
 availability: '[{"field":"template","value":""}]'
 layouts: ''
-settings: '[{"reference":"field_name","title":"Label","fieldtype":"textfield","default_value":"","fieldoptions":"","field_is_exposed":"asField"},{"reference":"field_value","title":"Value","fieldtype":"textfield","default_value":"","fieldoptions":"","field_is_exposed":"asField"}]'
+settings: '[{"reference":"field_name","title":"Name","fieldtype":"textfield","default_value":"","fieldoptions":"","field_is_exposed":"asField"},{"reference":"field_value","title":"Value","fieldtype":"textfield","default_value":"","fieldoptions":"","field_is_exposed":"asField"}]'

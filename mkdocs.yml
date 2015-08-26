@@ -1,0 +1,14 @@
+site_name: FormBlocks
+docs_dir: core/components/formblocks/docs
+site_dir: _build/site
+repo_url: https://github.com/Qaraqter/formblocks.git
+pages:
+- [index.md, Home]
+- [config/cb-import.md, Config, Import CB elements]
+- [config/cb-settings.md, Config, Configure CB elements]
+- [fields/form.md, CB Fields, Form]
+- [fields/input.md, CB Fields, Input fields]
+- [fields/select.md, CB Fields, Selectable options]
+- [fields/accept-terms.md, CB Fields, Accept terms checkbox]
+- [notes/limitations.md, Notes, Limitations]
+theme: readthedocs

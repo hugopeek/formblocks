@@ -1,62 +1,110 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<data package="contentblocks" exported="2015-06-28@19:44:02" total="8">
-    <cbField>
-        <id></id>
-        <input><![CDATA[chunk]]></input>
-        <name><![CDATA[Form]]></name>
-        <description><![CDATA[Add a form here. You can build your own forms with FormBlocks, under Content > Global Content > FormBlocks.]]></description>
-        <sortorder>18</sortorder>
-        <icon><![CDATA[form]]></icon>
-        <icon_type><![CDATA[core]]></icon_type>
-        <template><![CDATA[[[+value]]]]></template>
-        <properties><![CDATA[{"chunk":"36","custom_preview":"<p><em>Add a form here. You can build your own forms with FormBlocks, under Content > Global Content > FormBlocks.<\/em><\/p>"}]]></properties>
-        <availability><![CDATA[[]]]></availability>
-        <layouts><![CDATA[]]></layouts>
-        <times_per_layout>0</times_per_layout>
-        <times_per_page>0</times_per_page>
-        <settings><![CDATA[[{"reference":"form_id","title":"Formulier","fieldtype":"select","default_value":"","fieldoptions":"[[getResources? &parents=`98` &limit=`99` &tpl=`fbContentBlockRow` &showHidden=`1` &showUnpublished=`1` &sortBy=`menuindex` &sortDir=`ASC`]]","field_is_exposed":"asField","process_tags":"1"}]]]></settings>
-    </cbField>
-    <cbField>
-        <id></id>
-        <input><![CDATA[chunk]]></input>
-        <name><![CDATA[Input (Textfield)]]></name>
-        <description><![CDATA[]]></description>
-        <sortorder>26</sortorder>
-        <icon><![CDATA[paragraph]]></icon>
-        <icon_type><![CDATA[core]]></icon_type>
-        <template><![CDATA[[[+tag]]]]></template>
-        <properties><![CDATA[{"chunk":"112","custom_preview":"<p><em>You can select a different input type or add an optional placeholder in the Settings menu.<\/em><\/p>"}]]></properties>
-        <availability><![CDATA[[]]]></availability>
-        <layouts><![CDATA[]]></layouts>
-        <times_per_layout>0</times_per_layout>
-        <times_per_page>0</times_per_page>
-        <settings><![CDATA[[{"reference":"field_name","title":"Label","fieldtype":"textfield","default_value":"","fieldoptions":"","field_is_exposed":"asField"},{"reference":"field_layout","title":"Label position","fieldtype":"select","default_value":"[[*fb_form_layout]]","fieldoptions":"Inherit (from Form Layout)=[[*fb_form_layout]]\nAbove options=form-default\nLeft of options=form-horizontal","field_is_exposed":"modal"},{"reference":"field_type","title":"Input type","fieldtype":"select","default_value":"text","fieldoptions":"Text=text\nE-mail=email\nPhone=tel\nNumber=number\nDate=date\nURL=url\nPassword=password\nHidden=hidden","field_is_exposed":"modal"},{"reference":"field_placeholder","title":"Placeholder","fieldtype":"textfield","default_value":"","fieldoptions":"","field_is_exposed":"modal"},{"reference":"field_helptext","title":"Help text","fieldtype":"textfield","default_value":"","fieldoptions":"","field_is_exposed":"modal"},{"reference":"field_required","title":"Required","fieldtype":"select","default_value":"0","fieldoptions":"Yes=1\nNo=0","field_is_exposed":"asField"}]]]></settings>
-    </cbField>
-    <cbField>
-        <id></id>
-        <input><![CDATA[chunk]]></input>
-        <name><![CDATA[Input (Textarea)]]></name>
-        <description><![CDATA[]]></description>
-        <sortorder>27</sortorder>
-        <icon><![CDATA[paragraph]]></icon>
-        <icon_type><![CDATA[core]]></icon_type>
-        <template><![CDATA[[[+tag]]]]></template>
-        <properties><![CDATA[{"chunk":"113","custom_preview":"<p><em>You can add an optional placeholder in the Settings menu.<\/em><\/p>"}]]></properties>
-        <availability><![CDATA[[{"field":"template","value":"8"}]]]></availability>
-        <layouts><![CDATA[]]></layouts>
-        <times_per_layout>0</times_per_layout>
-        <times_per_page>0</times_per_page>
-        <settings><![CDATA[[{"reference":"field_name","title":"Label","fieldtype":"textfield","default_value":"","fieldoptions":"","field_is_exposed":"asField"},{"reference":"field_layout","title":"Label position","fieldtype":"select","default_value":"[[*fb_form_layout]]","fieldoptions":"Inherit (from Form Layout)=[[*fb_form_layout]]\nAbove options=form-default\nLeft of options=form-horizontal","field_is_exposed":"modal"},{"reference":"field_rows","title":"Rows","fieldtype":"textfield","default_value":"7","fieldoptions":"","field_is_exposed":"modal"},{"reference":"field_placeholder","title":"Placeholder","fieldtype":"textfield","default_value":"","fieldoptions":"","field_is_exposed":"modal"},{"reference":"field_helptext","title":"Help text","fieldtype":"textfield","default_value":"","fieldoptions":"","field_is_exposed":"modal"},{"reference":"field_required","title":"Required","fieldtype":"select","default_value":"0","fieldoptions":"Yes=1\nNo=0","field_is_exposed":"asField"}]]]></settings>
-    </cbField>
-    <cbField>
-        <id></id>
-        <input><![CDATA[repeater]]></input>
-        <name><![CDATA[Select Options]]></name>
-        <description><![CDATA[]]></description>
-        <sortorder>28</sortorder>
-        <icon><![CDATA[checkbox]]></icon>
-        <icon_type><![CDATA[core]]></icon_type>
-        <template><![CDATA[[[$fbSelectOptionRow?
+<data package="contentblocks" exported="2015-08-25@13:15:43" total="11">
+<cbField>
+	<id></id>
+	<input><![CDATA[chunk]]></input>
+	<name><![CDATA[Form]]></name>
+	<description><![CDATA[Add a form here. You can build your own forms with FormBlocks, under Content > Global Content > FormBlocks.]]></description>
+	<sortorder>14</sortorder>
+	<icon><![CDATA[form]]></icon>
+	<icon_type><![CDATA[core]]></icon_type>
+	<template><![CDATA[[[+value]]]]></template>
+	<properties><![CDATA[{"chunk":"52","custom_preview":"<p><em>Add a form here. You can build your own forms with FormBlocks, under Content > Global Content > FormBlocks.<\/em><\/p>"}]]></properties>
+	<availability><![CDATA[[]]]></availability>
+	<layouts><![CDATA[]]></layouts>
+	<times_per_layout>0</times_per_layout>
+	<times_per_page>0</times_per_page>
+	<settings><![CDATA[[{"reference":"form_id","title":"Form","fieldtype":"select","default_value":"","fieldoptions":"\n[[fbGetForms]]","field_is_exposed":"asField","process_tags":"1"}]]]></settings>
+</cbField>
+<cbField>
+	<id></id>
+	<input><![CDATA[chunk]]></input>
+	<name><![CDATA[Input (Textfield)]]></name>
+	<description><![CDATA[]]></description>
+	<sortorder>22</sortorder>
+	<icon><![CDATA[paragraph]]></icon>
+	<icon_type><![CDATA[core]]></icon_type>
+	<template><![CDATA[[[+tag]]]]></template>
+	<properties><![CDATA[{"chunk":"","custom_preview":"<p><em>You can select a different input type or add an optional placeholder in the Settings menu.<\/em><\/p>"}]]></properties>
+	<availability><![CDATA[]]></availability>
+	<layouts><![CDATA[]]></layouts>
+	<times_per_layout>0</times_per_layout>
+	<times_per_page>0</times_per_page>
+	<settings><![CDATA[[{"reference":"field_name","title":"Label","fieldtype":"textfield","default_value":"","fieldoptions":"","field_is_exposed":"asField"},{"reference":"field_layout","title":"Label position","fieldtype":"select","default_value":"[[*fb_form_layout]]","fieldoptions":"Inherit (from Form Layout)=[[*fb_form_layout]]\nAbove options=form-default\nLeft of options=form-horizontal","field_is_exposed":"modal"},{"reference":"field_type","title":"Input type","fieldtype":"select","default_value":"text","fieldoptions":"Text=text\nE-mail=email\nPhone=tel\nNumber=number\nDate=date\nURL=url\nPassword=password","field_is_exposed":"modal"},{"reference":"field_placeholder","title":"Placeholder","fieldtype":"textfield","default_value":"","fieldoptions":"","field_is_exposed":"modal"},{"reference":"field_helptext","title":"Help text","fieldtype":"textfield","default_value":"","fieldoptions":"","field_is_exposed":"modal"},{"reference":"field_required","title":"Required","fieldtype":"select","default_value":"0","fieldoptions":"Yes=1\nNo=0","field_is_exposed":"asField"}]]]></settings>
+</cbField>
+<cbField>
+	<id></id>
+	<input><![CDATA[chunk]]></input>
+	<name><![CDATA[Input (Textarea)]]></name>
+	<description><![CDATA[]]></description>
+	<sortorder>23</sortorder>
+	<icon><![CDATA[paragraph]]></icon>
+	<icon_type><![CDATA[core]]></icon_type>
+	<template><![CDATA[[[+tag]]]]></template>
+	<properties><![CDATA[{"chunk":"","custom_preview":"<p><em>You can add an optional placeholder in the Settings menu.<\/em><\/p>"}]]></properties>
+	<availability><![CDATA[]]></availability>
+	<layouts><![CDATA[]]></layouts>
+	<times_per_layout>0</times_per_layout>
+	<times_per_page>0</times_per_page>
+	<settings><![CDATA[[{"reference":"field_name","title":"Label","fieldtype":"textfield","default_value":"","fieldoptions":"","field_is_exposed":"asField"},{"reference":"field_layout","title":"Label position","fieldtype":"select","default_value":"[[*fb_form_layout]]","fieldoptions":"Inherit (from Form Layout)=[[*fb_form_layout]]\nAbove options=form-default\nLeft of options=form-horizontal","field_is_exposed":"modal"},{"reference":"field_rows","title":"Rows","fieldtype":"textfield","default_value":"7","fieldoptions":"","field_is_exposed":"modal"},{"reference":"field_placeholder","title":"Placeholder","fieldtype":"textfield","default_value":"","fieldoptions":"","field_is_exposed":"modal"},{"reference":"field_helptext","title":"Help text","fieldtype":"textfield","default_value":"","fieldoptions":"","field_is_exposed":"modal"},{"reference":"field_required","title":"Required","fieldtype":"select","default_value":"0","fieldoptions":"Yes=1\nNo=0","field_is_exposed":"asField"}]]]></settings>
+</cbField>
+<cbField>
+	<id></id>
+	<input><![CDATA[chunk]]></input>
+	<name><![CDATA[Input (Email)]]></name>
+	<description><![CDATA[]]></description>
+	<sortorder>24</sortorder>
+	<icon><![CDATA[paragraph]]></icon>
+	<icon_type><![CDATA[core]]></icon_type>
+	<template><![CDATA[[[+tag]]]]></template>
+	<properties><![CDATA[{"chunk":"","custom_preview":"<p><em>You can add an optional placeholder in the Settings menu.<\/em><\/p>"}]]></properties>
+	<availability><![CDATA[]]></availability>
+	<layouts><![CDATA[]]></layouts>
+	<times_per_layout>0</times_per_layout>
+	<times_per_page>1</times_per_page>
+	<settings><![CDATA[[{"reference":"field_name","title":"Label","fieldtype":"textfield","default_value":"","fieldoptions":"","field_is_exposed":"asField"},{"reference":"field_layout","title":"Label position","fieldtype":"select","default_value":"[[*fb_form_layout]]","fieldoptions":"Inherit (from Form Layout)=[[*fb_form_layout]]\nAbove options=form-default\nLeft of options=form-horizontal","field_is_exposed":"modal"},{"reference":"field_placeholder","title":"Placeholder","fieldtype":"textfield","default_value":"","fieldoptions":"","field_is_exposed":"modal"},{"reference":"field_helptext","title":"Help text","fieldtype":"textfield","default_value":"","fieldoptions":"","field_is_exposed":"modal"}]]]></settings>
+</cbField>
+<cbField>
+	<id></id>
+	<input><![CDATA[chunk]]></input>
+	<name><![CDATA[Input (File)]]></name>
+	<description><![CDATA[]]></description>
+	<sortorder>25</sortorder>
+	<icon><![CDATA[attachment]]></icon>
+	<icon_type><![CDATA[core]]></icon_type>
+	<template><![CDATA[[[+tag]]]]></template>
+	<properties><![CDATA[{"chunk":"","custom_preview":"<p><em>Visitors can upload a single file through this field.<\/em><\/p>"}]]></properties>
+	<availability><![CDATA[]]></availability>
+	<layouts><![CDATA[]]></layouts>
+	<times_per_layout>0</times_per_layout>
+	<times_per_page>0</times_per_page>
+	<settings><![CDATA[[{"reference":"field_name","title":"Label","fieldtype":"textfield","default_value":"","fieldoptions":"","field_is_exposed":"asField"},{"reference":"field_layout","title":"Label position","fieldtype":"select","default_value":"[[*fb_form_layout]]","fieldoptions":"Inherit (from Form Layout)=[[*fb_form_layout]]\nAbove options=form-default\nLeft of options=form-horizontal","field_is_exposed":"modal"},{"reference":"field_helptext","title":"Help text","fieldtype":"textfield","default_value":"","fieldoptions":"","field_is_exposed":"modal"},{"reference":"field_required","title":"Required","fieldtype":"select","default_value":"0","fieldoptions":"Yes=1\nNo=0","field_is_exposed":"asField"}]]]></settings>
+</cbField>
+<cbField>
+	<id></id>
+	<input><![CDATA[chunk]]></input>
+	<name><![CDATA[Input (Hidden)]]></name>
+	<description><![CDATA[]]></description>
+	<sortorder>26</sortorder>
+	<icon><![CDATA[snippet_B]]></icon>
+	<icon_type><![CDATA[core]]></icon_type>
+	<template><![CDATA[[[+tag]]]]></template>
+	<properties><![CDATA[{"chunk":"","custom_preview":"<p><\/p>"}]]></properties>
+	<availability><![CDATA[]]></availability>
+	<layouts><![CDATA[]]></layouts>
+	<times_per_layout>0</times_per_layout>
+	<times_per_page>0</times_per_page>
+	<settings><![CDATA[[{"reference":"field_name","title":"Name","fieldtype":"textfield","default_value":"","fieldoptions":"","field_is_exposed":"asField"},{"reference":"field_value","title":"Value","fieldtype":"textfield","default_value":"","fieldoptions":"","field_is_exposed":"asField"}]]]></settings>
+</cbField>
+<cbField>
+	<id></id>
+	<input><![CDATA[repeater]]></input>
+	<name><![CDATA[Select Options]]></name>
+	<description><![CDATA[]]></description>
+	<sortorder>27</sortorder>
+	<icon><![CDATA[checkbox]]></icon>
+	<icon_type><![CDATA[core]]></icon_type>
+	<template><![CDATA[[[$fbSelectOptionRow?
     &field_type=`[[+field_type]]`
     &field_name=`[[+field_name]]`
     &option_layout=`[[+option_layout]]`
@@ -65,22 +113,22 @@
     &idx=`[[+idx]]`
     &unique_idx=`[[+unique_idx]]`
 ]]]]></template>
-        <properties><![CDATA[{"wrapper_template":"[[$fbSelectOption?\n    &field_layout=`[[+field_layout]]`\n    &field_type=`[[+field_type]]`\n    &field_name=`[[+field_name]]`\n    &option_layout=`[[+option_layout]]`\n    &option_other=`[[+option_other]]`\n    &option_other_value=`[[+option_other_value]]`\n    &field_helptext=`[[+field_helptext]]`\n    &field_required=`[[+field_required]]`\n    &rows=`[[+rows]]`\n    &unique_idx=`[[+unique_idx]]`\n]]","group":"[{\"id\":\"\",\"input\":\"textfield\",\"key\":\"field_option\",\"name\":\"Option\",\"width\":\"100\",\"sortorder\":\"0\",\"template\":\"[[+value:fbStripNonAlpha]]\",\"properties\":{}}]","row_separator":"","max_items":"0"}]]></properties>
-        <availability><![CDATA[[{"field":"template","value":"8"}]]]></availability>
-        <layouts><![CDATA[]]></layouts>
-        <times_per_layout>0</times_per_layout>
-        <times_per_page>0</times_per_page>
-        <settings><![CDATA[[{"reference":"field_name","title":"Label","fieldtype":"textfield","default_value":"","fieldoptions":"","field_is_exposed":"asField"},{"reference":"field_layout","title":"Label position","fieldtype":"select","default_value":"[[*fb_form_layout]]","fieldoptions":"Inherit (from Form Layout)=[[*fb_form_layout]]\nAbove options=form-default\nLeft of options=form-horizontal","field_is_exposed":"modal"},{"reference":"option_layout","title":"Options layout","fieldtype":"select","default_value":"","fieldoptions":"Vertical=default\nInline=inline","field_is_exposed":"modal"},{"reference":"option_other","title":"Add \"Other\" option","fieldtype":"select","default_value":"0","fieldoptions":"Yes=1\nNo=0","field_is_exposed":"modal"},{"reference":"option_other_value","title":"\"Other\" option text","fieldtype":"textfield","default_value":"Something else","fieldoptions":"","field_is_exposed":"modal"},{"reference":"field_type","title":"Selection type","fieldtype":"select","default_value":"radio","fieldoptions":"Single select (radio)=radio\nMultiple select (checkbox)=checkbox","field_is_exposed":"asField"},{"reference":"field_helptext","title":"Help text","fieldtype":"textfield","default_value":"","fieldoptions":"","field_is_exposed":"asField"},{"reference":"field_required","title":"Required","fieldtype":"select","default_value":"0","fieldoptions":"Yes=1\nNo=0","field_is_exposed":"asField"}]]]></settings>
-    </cbField>
-    <cbField>
-        <id></id>
-        <input><![CDATA[repeater]]></input>
-        <name><![CDATA[Select Options (with Collapse)]]></name>
-        <description><![CDATA[]]></description>
-        <sortorder>28</sortorder>
-        <icon><![CDATA[checkbox]]></icon>
-        <icon_type><![CDATA[core]]></icon_type>
-        <template><![CDATA[[[$fbSelectOptionRow?
+	<properties><![CDATA[{"wrapper_template":"[[$fbSelectOption?\n    &field_layout=`[[+field_layout]]`\n    &field_type=`[[+field_type]]`\n    &field_name=`[[+field_name]]`\n    &option_layout=`[[+option_layout]]`\n    &option_other=`[[+option_other]]`\n    &option_other_value=`[[+option_other_value]]`\n    &field_helptext=`[[+field_helptext]]`\n    &field_required=`[[+field_required]]`\n    &rows=`[[+rows]]`\n    &unique_idx=`[[+unique_idx]]`\n]]","group":"[{\"id\":\"\",\"input\":\"textfield\",\"key\":\"field_option\",\"name\":\"Option\",\"width\":\"100\",\"sortorder\":\"0\",\"template\":\"[[+value:fbStripNonAlpha]]\",\"properties\":{}}]","row_separator":"","max_items":"0"}]]></properties>
+	<availability><![CDATA[]]></availability>
+	<layouts><![CDATA[]]></layouts>
+	<times_per_layout>0</times_per_layout>
+	<times_per_page>0</times_per_page>
+	<settings><![CDATA[[{"reference":"field_name","title":"Label","fieldtype":"textfield","default_value":"","fieldoptions":"","field_is_exposed":"asField"},{"reference":"field_layout","title":"Label position","fieldtype":"select","default_value":"[[*fb_form_layout]]","fieldoptions":"Inherit (from Form Layout)=[[*fb_form_layout]]\nAbove options=form-default\nLeft of options=form-horizontal","field_is_exposed":"modal"},{"reference":"option_layout","title":"Options layout","fieldtype":"select","default_value":"","fieldoptions":"Vertical=default\nInline=inline","field_is_exposed":"modal"},{"reference":"option_other","title":"Add \"Other\" option","fieldtype":"select","default_value":"0","fieldoptions":"Yes=1\nNo=0","field_is_exposed":"modal"},{"reference":"option_other_value","title":"\"Other\" option text","fieldtype":"textfield","default_value":"Something else","fieldoptions":"","field_is_exposed":"modal"},{"reference":"field_type","title":"Selection type","fieldtype":"select","default_value":"radio","fieldoptions":"Single select (radio)=radio\nMultiple select (checkbox)=checkbox","field_is_exposed":"asField"},{"reference":"field_helptext","title":"Help text","fieldtype":"textfield","default_value":"","fieldoptions":"","field_is_exposed":"asField"},{"reference":"field_required","title":"Required","fieldtype":"select","default_value":"0","fieldoptions":"Yes=1\nNo=0","field_is_exposed":"asField"}]]]></settings>
+</cbField>
+<cbField>
+	<id></id>
+	<input><![CDATA[repeater]]></input>
+	<name><![CDATA[Select Options (with Collapse)]]></name>
+	<description><![CDATA[]]></description>
+	<sortorder>28</sortorder>
+	<icon><![CDATA[checkbox]]></icon>
+	<icon_type><![CDATA[core]]></icon_type>
+	<template><![CDATA[[[$fbSelectOptionRow?
     &field_type=`[[+field_type]]`
     &field_name=`[[+field_name]]`
     &option_layout=`[[+option_layout]]`
@@ -90,42 +138,42 @@
     &idx=`[[+idx]]`
     &unique_idx=`[[+unique_idx]]`
 ]]]]></template>
-        <properties><![CDATA[{"wrapper_template":"[[$fbSelectOption?\n    &field_layout=`[[+field_layout]]`\n    &field_type=`[[+field_type]]`\n    &field_name=`[[+field_name]]`\n    &option_layout=`[[+option_layout]]`\n    &field_helptext=`[[+field_helptext]]`\n    &field_required=`[[+field_required]]`\n    &rows=`[[+rows]]`\n    &unique_idx=`[[+unique_idx]]`\n]]","group":"[{\"id\":\"\",\"input\":\"textfield\",\"key\":\"field_option\",\"name\":\"Option\",\"width\":\"50\",\"sortorder\":\"0\",\"template\":\"[[+value:fbStripNonAlpha]]\",\"properties\":{}},{\"id\":\"\",\"input\":\"textfield\",\"key\":\"collapse_target\",\"name\":\"Show\/hide target\",\"width\":\"50\",\"sortorder\":\"0\",\"template\":\"[[+value:default=`no-target`]]\",\"properties\":{}}]","row_separator":"","max_items":"0"}]]></properties>
-        <availability><![CDATA[[{"field":"template","value":"8"}]]]></availability>
-        <layouts><![CDATA[]]></layouts>
-        <times_per_layout>0</times_per_layout>
-        <times_per_page>0</times_per_page>
-        <settings><![CDATA[[{"reference":"field_name","title":"Label","fieldtype":"textfield","default_value":"","fieldoptions":"","field_is_exposed":"asField"},{"reference":"field_layout","title":"Label position","fieldtype":"select","default_value":"[[*fb_form_layout]]","fieldoptions":"Inherit (from Form Layout)=[[*fb_form_layout]]\nAbove options=form-default\nLeft of options=form-horizontal","field_is_exposed":"modal"},{"reference":"option_layout","title":"Options layout","fieldtype":"select","default_value":"","fieldoptions":"Vertical=default\nInline=inline","field_is_exposed":"modal"},{"reference":"field_type","title":"Selection type","fieldtype":"select","default_value":"radio","fieldoptions":"Single select (radio)=radio\nMultiple select (checkbox)=checkbox","field_is_exposed":"asField"},{"reference":"field_helptext","title":"Help text","fieldtype":"textfield","default_value":"","fieldoptions":"","field_is_exposed":"asField"},{"reference":"field_required","title":"Required","fieldtype":"select","default_value":"0","fieldoptions":"Yes=1\nNo=0","field_is_exposed":"asField"}]]]></settings>
-    </cbField>
-    <cbField>
-        <id></id>
-        <input><![CDATA[repeater]]></input>
-        <name><![CDATA[Select Dropdown]]></name>
-        <description><![CDATA[]]></description>
-        <sortorder>29</sortorder>
-        <icon><![CDATA[checkbox]]></icon>
-        <icon_type><![CDATA[core]]></icon_type>
-        <template><![CDATA[[[$fbSelectDropdownRow?
+	<properties><![CDATA[{"wrapper_template":"[[$fbSelectOption?\n    &field_layout=`[[+field_layout]]`\n    &field_type=`[[+field_type]]`\n    &field_name=`[[+field_name]]`\n    &option_layout=`[[+option_layout]]`\n    &field_helptext=`[[+field_helptext]]`\n    &field_required=`[[+field_required]]`\n    &rows=`[[+rows]]`\n    &unique_idx=`[[+unique_idx]]`\n]]","group":"[{\"id\":\"\",\"input\":\"textfield\",\"key\":\"field_option\",\"name\":\"Option\",\"width\":\"50\",\"sortorder\":\"0\",\"template\":\"[[+value:fbStripNonAlpha]]\",\"properties\":{}},{\"id\":\"\",\"input\":\"textfield\",\"key\":\"collapse_target\",\"name\":\"Show\/hide target\",\"width\":\"50\",\"sortorder\":\"0\",\"template\":\"[[+value:default=`no-target`]]\",\"properties\":{}}]","row_separator":"","max_items":"0"}]]></properties>
+	<availability><![CDATA[]]></availability>
+	<layouts><![CDATA[]]></layouts>
+	<times_per_layout>0</times_per_layout>
+	<times_per_page>0</times_per_page>
+	<settings><![CDATA[[{"reference":"field_name","title":"Label","fieldtype":"textfield","default_value":"","fieldoptions":"","field_is_exposed":"asField"},{"reference":"field_layout","title":"Label position","fieldtype":"select","default_value":"[[*fb_form_layout]]","fieldoptions":"Inherit (from Form Layout)=[[*fb_form_layout]]\nAbove options=form-default\nLeft of options=form-horizontal","field_is_exposed":"modal"},{"reference":"option_layout","title":"Options layout","fieldtype":"select","default_value":"","fieldoptions":"Vertical=default\nInline=inline","field_is_exposed":"modal"},{"reference":"field_type","title":"Selection type","fieldtype":"select","default_value":"radio","fieldoptions":"Single select (radio)=radio\nMultiple select (checkbox)=checkbox","field_is_exposed":"asField"},{"reference":"field_helptext","title":"Help text","fieldtype":"textfield","default_value":"","fieldoptions":"","field_is_exposed":"asField"},{"reference":"field_required","title":"Required","fieldtype":"select","default_value":"0","fieldoptions":"Yes=1\nNo=0","field_is_exposed":"asField"}]]]></settings>
+</cbField>
+<cbField>
+	<id></id>
+	<input><![CDATA[repeater]]></input>
+	<name><![CDATA[Select Dropdown]]></name>
+	<description><![CDATA[]]></description>
+	<sortorder>29</sortorder>
+	<icon><![CDATA[checkbox]]></icon>
+	<icon_type><![CDATA[core]]></icon_type>
+	<template><![CDATA[[[$fbSelectDropdownRow?
     &field_name=`[[+field_name]]`
     &field_option=`[[+field_option]]`
     &unique_idx=`[[+unique_idx]]`
 ]]]]></template>
-        <properties><![CDATA[{"wrapper_template":"[[$fbSelectDropdown?\n    &field_layout=`[[+field_layout]]`\n    &field_name=`[[+field_name]]`\n    &field_default=`[[+field_default]]`\n    &field_helptext=`[[+field_helptext]]`\n    &field_required=`[[+field_required]]`\n    &rows=`[[+rows]]`\n    &unique_idx=`[[+unique_idx]]`\n]]","group":"[{\"id\":\"\",\"input\":\"textfield\",\"key\":\"field_option\",\"name\":\"Option\",\"width\":\"100\",\"sortorder\":\"0\",\"template\":\"[[+value:fbStripNonAlpha]]\",\"properties\":{}}]","row_separator":"","max_items":"0"}]]></properties>
-        <availability><![CDATA[[{"field":"template","value":"8"}]]]></availability>
-        <layouts><![CDATA[]]></layouts>
-        <times_per_layout>0</times_per_layout>
-        <times_per_page>0</times_per_page>
-        <settings><![CDATA[[{"reference":"field_name","title":"Label","fieldtype":"textfield","default_value":"","fieldoptions":"","field_is_exposed":"asField"},{"reference":"field_layout","title":"Label position","fieldtype":"select","default_value":"[[*fb_form_layout]]","fieldoptions":"Inherit (from Form Layout)=[[*fb_form_layout]]\nAbove options=form-default\nLeft of options=form-horizontal","field_is_exposed":"modal"},{"reference":"field_default","title":"Default option","fieldtype":"textfield","default_value":"","fieldoptions":"","field_is_exposed":"asField"},{"reference":"field_helptext","title":"Help text","fieldtype":"textfield","default_value":"","fieldoptions":"","field_is_exposed":"asField"},{"reference":"field_required","title":"Required","fieldtype":"select","default_value":"0","fieldoptions":"Yes=1\nNo=0","field_is_exposed":"asField"}]]]></settings>
-    </cbField>
-    <cbField>
-        <id></id>
-        <input><![CDATA[code]]></input>
-        <name><![CDATA[Select Dropdown (with Auto Options)]]></name>
-        <description><![CDATA[]]></description>
-        <sortorder>29</sortorder>
-        <icon><![CDATA[snippet_A]]></icon>
-        <icon_type><![CDATA[core]]></icon_type>
-        <template><![CDATA[[[$fbSelectDropdown?
+	<properties><![CDATA[{"wrapper_template":"[[$fbSelectDropdown?\n    &field_layout=`[[+field_layout]]`\n    &field_name=`[[+field_name]]`\n    &field_default=`[[+field_default]]`\n    &field_helptext=`[[+field_helptext]]`\n    &field_required=`[[+field_required]]`\n    &rows=`[[+rows]]`\n    &unique_idx=`[[+unique_idx]]`\n]]","group":"[{\"id\":\"\",\"input\":\"textfield\",\"key\":\"field_option\",\"name\":\"Option\",\"width\":\"100\",\"sortorder\":\"0\",\"template\":\"[[+value:fbStripNonAlpha]]\",\"properties\":{}}]","row_separator":"","max_items":"0"}]]></properties>
+	<availability><![CDATA[]]></availability>
+	<layouts><![CDATA[]]></layouts>
+	<times_per_layout>0</times_per_layout>
+	<times_per_page>0</times_per_page>
+	<settings><![CDATA[[{"reference":"field_name","title":"Label","fieldtype":"textfield","default_value":"","fieldoptions":"","field_is_exposed":"asField"},{"reference":"field_layout","title":"Label position","fieldtype":"select","default_value":"[[*fb_form_layout]]","fieldoptions":"Inherit (from Form Layout)=[[*fb_form_layout]]\nAbove options=form-default\nLeft of options=form-horizontal","field_is_exposed":"modal"},{"reference":"field_default","title":"Default option","fieldtype":"textfield","default_value":"","fieldoptions":"","field_is_exposed":"asField"},{"reference":"field_helptext","title":"Help text","fieldtype":"textfield","default_value":"","fieldoptions":"","field_is_exposed":"asField"},{"reference":"field_required","title":"Required","fieldtype":"select","default_value":"0","fieldoptions":"Yes=1\nNo=0","field_is_exposed":"asField"}]]]></settings>
+</cbField>
+<cbField>
+	<id></id>
+	<input><![CDATA[code]]></input>
+	<name><![CDATA[Select Dropdown (with Auto Options)]]></name>
+	<description><![CDATA[]]></description>
+	<sortorder>30</sortorder>
+	<icon><![CDATA[snippet_A]]></icon>
+	<icon_type><![CDATA[core]]></icon_type>
+	<template><![CDATA[[[$fbSelectDropdown?
     &field_layout=`[[+field_layout]]`
     &field_name=`[[+field_name]]`
     &field_option=`[[+field_option]]`
@@ -135,59 +183,27 @@
     &rows=`[[+value]]`
     &unique_idx=`[[+unique_idx]]`
 ]]]]></template>
-        <properties><![CDATA[{"available_languages":"html=HTML","default_language":"html","entities":"0"}]]></properties>
-        <availability><![CDATA[[{"field":"template","value":"8"}]]]></availability>
-        <layouts><![CDATA[]]></layouts>
-        <times_per_layout>0</times_per_layout>
-        <times_per_page>0</times_per_page>
-        <settings><![CDATA[[{"reference":"field_name","title":"Label","fieldtype":"textfield","default_value":"","fieldoptions":"","field_is_exposed":"asField"},{"reference":"field_layout","title":"Label position","fieldtype":"select","default_value":"[[*fb_form_layout]]","fieldoptions":"Inherit (from Form Layout)=[[*fb_form_layout]]\nAbove options=form-default\nLeft of options=form-horizontal","field_is_exposed":"modal"},{"reference":"field_default","title":"Default option","fieldtype":"textfield","default_value":"","fieldoptions":"","field_is_exposed":"asField"},{"reference":"field_helptext","title":"Help text","fieldtype":"textfield","default_value":"","fieldoptions":"","field_is_exposed":"asField"},{"reference":"field_required","title":"Required","fieldtype":"select","default_value":"0","fieldoptions":"Yes=1\nNo=0","field_is_exposed":"asField"}]]]></settings>
-    </cbField>
-    <cbField>
-        <id></id>
-        <input><![CDATA[chunk]]></input>
-        <name><![CDATA[Input (Hidden)]]></name>
-        <description><![CDATA[]]></description>
-        <sortorder>30</sortorder>
-        <icon><![CDATA[snippet_B]]></icon>
-        <icon_type><![CDATA[core]]></icon_type>
-        <template><![CDATA[[[+tag]]]]></template>
-        <properties><![CDATA[{"chunk":"119","custom_preview":"<p><\/p>"}]]></properties>
-        <availability><![CDATA[[{"field":"template","value":"8"}]]]></availability>
-        <layouts><![CDATA[]]></layouts>
-        <times_per_layout>0</times_per_layout>
-        <times_per_page>0</times_per_page>
-        <settings><![CDATA[[{"reference":"field_name","title":"Label","fieldtype":"textfield","default_value":"","fieldoptions":"","field_is_exposed":"asField"},{"reference":"field_value","title":"Value","fieldtype":"textfield","default_value":"","fieldoptions":"","field_is_exposed":"asField"}]]]></settings>
-    </cbField>
-    <cbField>
-        <id></id>
-        <input><![CDATA[chunk]]></input>
-        <name><![CDATA[Input (File)]]></name>
-        <description><![CDATA[]]></description>
-        <sortorder>31</sortorder>
-        <icon><![CDATA[attachment]]></icon>
-        <icon_type><![CDATA[core]]></icon_type>
-        <template><![CDATA[[[+tag]]]]></template>
-        <properties><![CDATA[{"chunk":"118","custom_preview":"<p><em>Website visitors can upload a file through through this field. The file will be attached to the email.<\/em><\/p>"}]]></properties>
-        <availability><![CDATA[[{"field":"template","value":"8"}]]]></availability>
-        <layouts><![CDATA[]]></layouts>
-        <times_per_layout>0</times_per_layout>
-        <times_per_page>0</times_per_page>
-        <settings><![CDATA[[{"reference":"field_name","title":"Label","fieldtype":"textfield","default_value":"","fieldoptions":"","field_is_exposed":"asField"},{"reference":"field_layout","title":"Label position","fieldtype":"select","default_value":"[[*fb_form_layout]]","fieldoptions":"Inherit (from Form Layout)=[[*fb_form_layout]]\nAbove options=form-default\nLeft of options=form-horizontal","field_is_exposed":"modal"},{"reference":"field_helptext","title":"Help text","fieldtype":"textfield","default_value":"","fieldoptions":"","field_is_exposed":"modal"},{"reference":"field_required","title":"Required","fieldtype":"select","default_value":"0","fieldoptions":"Yes=1\nNo=0","field_is_exposed":"asField"}]]]></settings>
-    </cbField>
-    <cbField>
-        <id></id>
-        <input><![CDATA[chunk]]></input>
-        <name><![CDATA[Accept Terms and Conditions]]></name>
-        <description><![CDATA[]]></description>
-        <sortorder>32</sortorder>
-        <icon><![CDATA[checkbox]]></icon>
-        <icon_type><![CDATA[core]]></icon_type>
-        <template><![CDATA[[[+tag]]]]></template>
-        <properties><![CDATA[{"chunk":"122","custom_preview":"<p><em>You can link to your terms by entering the corresponding resource ID and using the [[+link]] placeholder in the field text.<\/em><\/p>"}]]></properties>
-        <availability><![CDATA[[{"field":"template","value":"8"}]]]></availability>
-        <layouts><![CDATA[]]></layouts>
-        <times_per_layout>0</times_per_layout>
-        <times_per_page>1</times_per_page>
-        <settings><![CDATA[[{"reference":"field_text","title":"Field text","fieldtype":"textfield","default_value":"I accept the [[+link]].","fieldoptions":"","field_is_exposed":"asField"},{"reference":"link_id","title":"Link resource ID","fieldtype":"textfield","default_value":"","fieldoptions":"","field_is_exposed":"modal"},{"reference":"link_text","title":"Link text","fieldtype":"textfield","default_value":"Terms and Conditions","fieldoptions":"","field_is_exposed":"modal"}]]]></settings>
-    </cbField>
+	<properties><![CDATA[{"available_languages":"html=HTML","default_language":"html","entities":"0"}]]></properties>
+	<availability><![CDATA[]]></availability>
+	<layouts><![CDATA[]]></layouts>
+	<times_per_layout>0</times_per_layout>
+	<times_per_page>0</times_per_page>
+	<settings><![CDATA[[{"reference":"field_name","title":"Label","fieldtype":"textfield","default_value":"","fieldoptions":"","field_is_exposed":"asField"},{"reference":"field_layout","title":"Label position","fieldtype":"select","default_value":"[[*fb_form_layout]]","fieldoptions":"Inherit (from Form Layout)=[[*fb_form_layout]]\nAbove options=form-default\nLeft of options=form-horizontal","field_is_exposed":"modal"},{"reference":"field_default","title":"Default option","fieldtype":"textfield","default_value":"","fieldoptions":"","field_is_exposed":"asField"},{"reference":"field_helptext","title":"Help text","fieldtype":"textfield","default_value":"","fieldoptions":"","field_is_exposed":"asField"},{"reference":"field_required","title":"Required","fieldtype":"select","default_value":"0","fieldoptions":"Yes=1\nNo=0","field_is_exposed":"asField"}]]]></settings>
+</cbField>
+<cbField>
+	<id></id>
+	<input><![CDATA[chunk]]></input>
+	<name><![CDATA[Accept Terms and Conditions]]></name>
+	<description><![CDATA[]]></description>
+	<sortorder>31</sortorder>
+	<icon><![CDATA[checkbox]]></icon>
+	<icon_type><![CDATA[core]]></icon_type>
+	<template><![CDATA[[[+tag]]]]></template>
+	<properties><![CDATA[{"chunk":"","custom_preview":"<p><em>You can link to your terms by entering the corresponding resource ID and using the [[+link]] placeholder in the field text.<\/em><\/p>"}]]></properties>
+	<availability><![CDATA[]]></availability>
+	<layouts><![CDATA[]]></layouts>
+	<times_per_layout>0</times_per_layout>
+	<times_per_page>1</times_per_page>
+	<settings><![CDATA[[{"reference":"field_text","title":"Field text","fieldtype":"textfield","default_value":"I accept the [[+link]].","fieldoptions":"","field_is_exposed":"asField"},{"reference":"link_id","title":"Link resource ID","fieldtype":"textfield","default_value":"[[++terms_and_conditions_id]]","fieldoptions":"","field_is_exposed":"modal"},{"reference":"link_text","title":"Link text","fieldtype":"textfield","default_value":"Terms and Conditions","fieldoptions":"","field_is_exposed":"modal"}]]]></settings>
+</cbField>
 </data>

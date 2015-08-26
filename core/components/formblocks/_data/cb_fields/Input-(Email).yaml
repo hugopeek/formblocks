@@ -2,11 +2,11 @@ id:
 input: chunk
 name: 'Input (Email)'
 description: ''
-sortorder:
+sortorder: 24
 icon: paragraph
 template: '[[+tag]]'
-properties: '{"chunk":"","custom_preview":"<p><em>This will be the primary email address of this form, meaning reply-to settings and autoresponders will be using this address. You can add an optional placeholder in the Settings menu.<\/em><\/p>"}'
-availability: '[]'
+properties: '{"chunk":"","custom_preview":"<p><em>You can add an optional placeholder in the Settings menu.<\/em><\/p>"}'
+availability: '[{"field":"template","value":""}]'
 layouts: ''
 times_per_page: 1
 settings: '[{"reference":"field_name","title":"Label","fieldtype":"textfield","default_value":"","fieldoptions":"","field_is_exposed":"asField"},{"reference":"field_layout","title":"Label position","fieldtype":"select","default_value":"[[*fb_form_layout]]","fieldoptions":"Inherit (from Form Layout)=[[*fb_form_layout]]\nAbove options=form-default\nLeft of options=form-horizontal","field_is_exposed":"modal"},{"reference":"field_placeholder","title":"Placeholder","fieldtype":"textfield","default_value":"","fieldoptions":"","field_is_exposed":"modal"},{"reference":"field_helptext","title":"Help text","fieldtype":"textfield","default_value":"","fieldoptions":"","field_is_exposed":"modal"}]'

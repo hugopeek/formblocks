@@ -2,7 +2,7 @@ id:
 input: chunk
 name: 'Input (Textarea)'
 description: ''
-sortorder:
+sortorder: 23
 icon: paragraph
 template: '[[+tag]]'
 properties: '{"chunk":"","custom_preview":"<p><em>You can add an optional placeholder in the Settings menu.<\/em><\/p>"}'
