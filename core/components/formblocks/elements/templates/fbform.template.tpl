@@ -16,19 +16,12 @@
     ]]
     &emailSubject=`[[*fb_email_subject:empty=`[[%formblocks.email.subject]]`]]`
 
-    [[!If?
-        &subject=`[[*fb_autoresponder_toggle]]`
-        &operator=`EQ`
-        &operand=`1`
-        &then=`
-            &fiarTpl=`fbAutoresponder`
-            &fiarToField=`fb[[*id]]-email`
-            &fiarFrom=`[[*fb_autoresponder_from:empty=`[[++emailsender]]`]]`
-            &fiarFromName=`[[*fb_autoresponder_from_name:empty=`[[++site_name]]`]]`
-            &fiarReplyTo=`[[*fb_autoresponder_reply_to:empty=`[[++client_email:empty=`[[++emailsender]]`]]`]]`
-            &fiarSubject=`[[*fb_autoresponder_subject:empty=`[[%formblocks.autoresponder.subject]]`]]`
-        `
-    ]]
+    &fiarTpl=`fbAutoresponder`
+    &fiarToField=`[[*fb_autoresponder_toggle:eq=`1`:then=`fb[[*id]]-email`]]`
+    &fiarFrom=`[[*fb_autoresponder_from:empty=`[[++emailsender]]`]]`
+    &fiarFromName=`[[*fb_autoresponder_from_name:empty=`[[++site_name]]`]]`
+    &fiarReplyTo=`[[*fb_autoresponder_reply_to:empty=`[[++client_email:empty=`[[++emailsender]]`]]`]]`
+    &fiarSubject=`[[*fb_autoresponder_subject:empty=`[[%formblocks.autoresponder.subject]]`]]`
 
     &customValidators=`requiredIf,requiredIfNot`
     &validate=`
