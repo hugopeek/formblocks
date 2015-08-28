@@ -12,6 +12,7 @@ After installing the package, there’s a few extra things that need doing:
 
 ## Dependencies
 
+- ContentBlocks
 - FormIt
 - getResources
 - renderResources
