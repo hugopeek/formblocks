@@ -2,8 +2,8 @@
 
 [[!fbSimplxWidgeteer?
     &dataSet=`[[!fbEmailGetJSON? &formID=`[[*id]]`]]`
-    &useChunkMatching=`true`
-    &chunkMatchRoot=`true`
+    &useChunkMatching=`1`
+    &chunkMatchRoot=`1`
     &chunkPrefix=`fbEmailRow_`
     &chunkMatchingSelector=`field`
 ]]
