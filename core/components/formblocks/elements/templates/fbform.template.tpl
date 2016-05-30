@@ -27,6 +27,7 @@
     &validate=`
         [[!fbValidateProcessJson? &json=`[[!fbEmailGetJSON? &formID=`[[*id]]`]]`]]
         [[cbGetFieldContent:notempty=`fb[[*id]]-email:email:required,`? &field=`[[++formblocks.cb_field_input_email_id]]`]]
+        [[cbGetFieldContent:notempty=`fb[[*id]]-accept-terms:required,`? &field=`[[++formblocks.cb_field_accept_terms_id]]`]]
         [[$fbValidateCustomFields:notempty=`[[$fbValidateCustomFields]]`]]
         workemail:blank`
     &placeholderPrefix=`fb[[*id]].`
