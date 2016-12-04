@@ -712,20 +712,29 @@ if(!class_exists('simplx_widgeteer')){
 
 */
 
-$dataSourceUrl = isset($dataSourceUrl) ? $dataSourceUrl : 'null';
-$dataSourceUrl = isset($dataSetUrl) ? $dataSetUrl : $dataSourceUrl; //New interface parameter to mend naming consistency issue.
-$staticChunkName = isset($staticChunkName) ? $staticChunkName : 'null';
-$dataSet = isset($dataSet) ? ($dataSet) : 'null';
-$useChunkMatching = isset($useChunkMatching) ? $useChunkMatching : true;
-$chunkMatchingSelector = isset($chunkMatchingSelector) ? $chunkMatchingSelector : '';
-$dataSetRoot = isset($dataSetRoot) ? $dataSetRoot : 'null';
-$chunkMatchRoot = isset($chunkMatchRoot) ? $chunkMatchRoot : false;
-$chunkPrefix = isset($chunkPrefix) ? $chunkPrefix : '';
-$dataSet = str_replace(array('|xq|','|xe|','|xa|'),array('?','=','&') , $dataSet);
-$preprocessor = isset($preprocessor) ? $preprocessor : '';
+/*
+	Converted to MODx specific syntax for consistency.
+		https://rtfm.modx.com/revolution/2.x/developing-in-modx/basic-development/snippets/how-to-write-a-good-snippet
+		
+	Also, because snippet properties are interpreted as strings, 'false' evaluates as true. That
+	said, it is common practice to use 0 or 1 representing true or false respectively when
+	processing properties in MODx snippets.
+		http://php.net/manual/en/language.types.boolean.php#language.types.boolean.casting
+	
+	Alternatively, one could evaluate the expression, "property === 'false'" during assignment.
+*/
+$dataSourceUrl = $modx->getOption('dataSourceUrl', $scriptProperties, 'null');
+$dataSourceUrl = $modx->getOption('dataSetUrl', $scriptProperties, $dataSourceUrl); //New interface parameter to mend naming consistency issue.
+$staticChunkName = $modx->getOption('staticChunkName', $scriptProperties, 'null');
+$dataSet = str_replace(array('|xq|','|xe|','|xa|'), array('?','=','&'), $modx->getOption('dataSet', $scriptProperties, 'null'));
+$useChunkMatching = $modx->getOption('useChunkMatching', $scriptProperties, 1);
+$chunkMatchingSelector = $modx->getOption('chunkMatchingSelector', $scriptProperties, '');
+$dataSetRoot = $modx->getOption('dataSetRoot', $scriptProperties, 'null');
+$chunkMatchRoot = $modx->getOption('chunkMatchRoot', $scriptProperties, 0);
+$chunkPrefix = $modx->getOption('chunkPrefix', $scriptProperties, '');
+$preprocessor = $modx->getOption('preprocessor', $scriptProperties, '');
 
-
-$debugmode = isset($debugmode) ? $debugmode : false;
+$debugmode = $modx->getOption('debugmode', $scriptProperties, 0);
 
 if($debugmode){
     $modx->setLogLevel(modX::LOG_LEVEL_DEBUG);
@@ -738,17 +747,10 @@ if($dataSourceUrl == 'null' && $dataSet == 'null'){
     $w = new simplx_widgeteer();
     $w->debugmode = $debugmode;
 
-    /*
-      PHP bug perhaps? $useChunkMatching evaluates as true even if its false!?
-      I have to "switch poles" in order to get the right effect...
-    */
-    if($useChunkMatching && $staticChunkName != 'null'){
-
-        $w->useChunkMatching = false;
+    if(!$useChunkMatching){
         $w->staticChunkName = $staticChunkName;
 
     } else {
-        $w->useChunkMatching = true;
         $w->chunkMatchingSelector = $chunkMatchingSelector;
     }
 
