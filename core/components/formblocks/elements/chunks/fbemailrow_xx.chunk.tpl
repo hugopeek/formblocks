@@ -1,1 +1,1 @@
-[[+settings]]
+[[!$fbEmailRow_settings]]
